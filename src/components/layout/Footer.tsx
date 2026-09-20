@@ -6,7 +6,9 @@ export function Footer() {
     <footer className="border-t border-[#C9A86A]/10 bg-[#081410] mt-16">
       <div className="mx-auto max-w-[1280px] px-4 sm:px-6 py-12 grid gap-10 md:grid-cols-[1.2fr_1fr_1fr]">
         <div>
-          <img src="/brand/logo-light.png" alt="LeyBros" className="h-10 w-auto" />
+          <span className="inline-flex bg-white rounded-full px-3 py-2">
+            <img src="/brand/logo.png" alt="LeyBros" className="h-8 w-auto" />
+          </span>
           <p className="mt-3 max-w-md text-[15px] leading-7 text-zinc-400">
             Freelance technology & AI creative practice on a genuine software-engineering foundation. Build systems. Create visuals. Observe markets.
           </p>
