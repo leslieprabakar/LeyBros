@@ -17,27 +17,27 @@ export function PricingCard({ tier }: { tier: Tier }) {
   return (
     <div className={`relative overflow-hidden rounded-[16px] border p-6 flex flex-col ${tier.popular ? "border-[#C9A86A]/30 bg-gradient-to-b from-[#1a3d2e] to-[#0f241c] shadow-[0_8px_32px_rgba(201,168,106,0.12)]" : "border-[#C9A86A]/12 bg-[#10201A]/60"}`}>
       {tier.popular && (
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 rounded-b-full bg-[#C9A86A] px-4 py-1 text-[10px] tracking-[0.14em] font-semibold text-[#081410]">MOST POPULAR</div>
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 rounded-b-full bg-[#C9A86A] px-4 py-1 text-[12px] tracking-[0.14em] font-semibold text-[#081410]">MOST POPULAR</div>
       )}
-      <div className={`text-[11px] tracking-[0.18em] ${tier.popular ? "text-[#C9A86A] mt-4" : "text-zinc-400"}`}>{tier.kicker}</div>
-      <div className="mt-2 font-display text-xl font-semibold text-white">{tier.name}</div>
-      <p className="mt-1 text-xs leading-5 text-zinc-400">{tier.desc}</p>
+      <div className={`text-[13px] tracking-[0.18em] ${tier.popular ? "text-[#C9A86A] mt-4" : "text-zinc-400"}`}>{tier.kicker}</div>
+      <div className="mt-2 font-display text-[22px] font-semibold text-white">{tier.name}</div>
+      <p className="mt-1 text-[14px] leading-6 text-zinc-400">{tier.desc}</p>
       <div className="mt-5 flex items-baseline gap-1">
-        <span className="font-display text-[32px] font-semibold text-white">{tier.price}</span>
-        <span className="text-xs text-zinc-500">{tier.period}</span>
+        <span className="font-display text-[36px] font-semibold text-white">{tier.price}</span>
+        <span className="text-[13px] text-zinc-400">{tier.period}</span>
       </div>
-      <ul className="mt-6 space-y-2.5 text-xs leading-5 text-zinc-300 flex-1">
+      <ul className="mt-6 space-y-2.5 text-[14px] leading-6 text-zinc-300 flex-1">
         {tier.features.map((f) => (
           <li key={f} className="flex gap-2">
-            <span className="mt-1 h-1.5 w-1.5 rounded-full bg-[#C9A86A]/70 shrink-0" />
+            <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-[#C9A86A]/70 shrink-0" />
             <span>{f}</span>
           </li>
         ))}
       </ul>
-      <Link href={tier.href} className={`mt-6 inline-flex w-full justify-center rounded-full px-6 py-3 text-xs font-semibold tracking-wide transition ${tier.popular ? "bg-[#C9A86A] text-[#081410] hover:bg-[#D4B78A]" : "border border-[#C9A86A]/25 text-[#E8D5B5] hover:bg-[#C9A86A]/10"}`}>
+      <Link href={tier.href} className={`mt-6 inline-flex w-full justify-center rounded-full px-6 py-3.5 text-[14px] font-semibold tracking-wide transition ${tier.popular ? "bg-[#C9A86A] text-[#081410] hover:bg-[#D4B78A]" : "border border-[#C9A86A]/25 text-[#E8D5B5] hover:bg-[#C9A86A]/10"}`}>
         {tier.cta} →
       </Link>
-      <p className="mt-3 text-center text-[10px] text-zinc-500">No hidden charges • 50% advance</p>
+      <p className="mt-3 text-center text-[12px] text-zinc-400">No hidden charges • 50% advance</p>
     </div>
   );
 }

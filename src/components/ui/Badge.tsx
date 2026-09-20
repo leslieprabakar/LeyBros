@@ -6,5 +6,5 @@ export function Badge({ children, variant = "default" }: { children: React.React
     create: "border-fuchsia-500/20 text-fuchsia-200 bg-fuchsia-500/10",
     observe: "border-amber-500/25 text-amber-200 bg-amber-500/10",
   };
-  return <span className={`inline-flex items-center rounded-full border px-2.5 py-1 text-[11px] tracking-wide ${map[variant]}`}>{children}</span>;
+  return <span className={`inline-flex items-center rounded-full border px-3 py-1.5 text-[13px] tracking-wide ${map[variant]}`}>{children}</span>;
 }

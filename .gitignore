@@ -47,3 +47,4 @@ LeyBros.txt
 ReferenceImages/
 *.log
 dev.log
+.vercel

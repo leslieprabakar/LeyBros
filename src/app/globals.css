@@ -26,13 +26,15 @@
 }
 
 * { scrollbar-width: thin; scrollbar-color: #2a3d32 transparent; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; font-size: 17px; }
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-geist-sans), system-ui, -apple-system, sans-serif;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
 /* Focus */

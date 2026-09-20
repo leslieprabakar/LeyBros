@@ -12,24 +12,24 @@ export function ProjectCard({ p }: { p: Project }) {
         {/* gold bottom line on hover */}
         <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#C9A86A]/40 to-transparent opacity-0 group-hover:opacity-100 transition" />
         <div className="relative text-center px-6">
-          <div className="text-[11px] tracking-[0.16em] text-[#C9A86A]/70">{p.sub.toUpperCase()}</div>
-          <div className="mt-2 font-display text-sm font-medium text-white line-clamp-2">{p.title}</div>
-          {isPlaceholder && <div className="mt-2 inline-flex rounded-full border border-dashed border-[#C9A86A]/25 bg-black/40 px-3 py-1 text-[11px] text-zinc-400">Awaiting asset — integration ready</div>}
+          <div className="text-[13px] tracking-[0.16em] text-[#C9A86A]/70">{p.sub.toUpperCase()}</div>
+          <div className="mt-2 font-display text-[15px] font-medium text-white line-clamp-2">{p.title}</div>
+          {isPlaceholder && <div className="mt-2 inline-flex rounded-full border border-dashed border-[#C9A86A]/25 bg-black/40 px-3 py-1.5 text-[12px] text-zinc-400">Awaiting asset — integration ready</div>}
         </div>
         <div className="absolute left-3 top-3 flex gap-2">
           <Badge variant={variant}>{p.category.toUpperCase()}</Badge>
           {isPlaceholder && <Badge variant="gold">Placeholder</Badge>}
         </div>
       </div>
-      <div className="p-4">
-        <div className="font-display text-sm font-medium text-white line-clamp-2">{p.title}</div>
-        <p className="mt-1 text-xs leading-5 text-zinc-400 line-clamp-2">{p.excerpt}</p>
+      <div className="p-5">
+        <div className="font-display text-[16px] font-medium text-white line-clamp-2">{p.title}</div>
+        <p className="mt-1 text-[14px] leading-6 text-zinc-400 line-clamp-2">{p.excerpt}</p>
         <div className="mt-3 flex flex-wrap gap-1.5">
-          {p.tags.slice(0,3).map(t=> <span key={t} className="rounded-full bg-white/5 border border-white/5 px-2 py-1 text-[10px] tracking-wide text-zinc-300">{t}</span>)}
+          {p.tags.slice(0,3).map(t=> <span key={t} className="rounded-full bg-white/5 border border-white/5 px-2.5 py-1 text-[12px] tracking-wide text-zinc-300">{t}</span>)}
         </div>
         <div className="mt-4 flex gap-2">
-          <Link href={p.category==="build" ? "/build" : "/create"} className="text-xs font-semibold text-[#E8D5B5] hover:underline">View hub →</Link>
-          {isPlaceholder && <span className="text-xs text-zinc-500">• drop asset to publish</span>}
+          <Link href={p.category==="build" ? "/build" : "/create"} className="text-[14px] font-semibold text-[#E8D5B5] hover:underline">View hub →</Link>
+          {isPlaceholder && <span className="text-[13px] text-zinc-500">• drop asset to publish</span>}
         </div>
       </div>
     </div>
