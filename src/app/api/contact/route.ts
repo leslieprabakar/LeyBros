@@ -19,7 +19,7 @@ export async function POST(req: Request) {
     if (!mod) throw new Error("resend package not installed — run npm i resend when ready");
     const { Resend } = mod as { Resend: new (k: string) => { emails: { send: (o: unknown) => Promise<unknown> } } };
     const resend = new Resend(key);
-    const to = data.category === "stock-knowledge" ? process.env.CONTACT_TO_OBSERVE || process.env.CONTACT_TO || "hello@leybros.com" : process.env.CONTACT_TO_FREELANCE || process.env.CONTACT_TO || "hello@leybros.com";
+    const to = data.category === "stock-knowledge" ? process.env.CONTACT_TO_MARKET_INSIGHT || process.env.CONTACT_TO || "hello@leybros.com" : process.env.CONTACT_TO_FREELANCE || process.env.CONTACT_TO || "hello@leybros.com";
     await resend.emails.send({
       from: process.env.EMAIL_FROM || "LeyBros <onboarding@resend.dev>",
       to,

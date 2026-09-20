@@ -1,32 +1,32 @@
 export const site = {
   name: "LeyBros Private Ltd.",
   shortName: "LeyBros",
-  tagline: "BUILD • CREATE • OBSERVE",
+  tagline: "Web • AI • Market Insight",
   url: "https://leybros.com",
   description:
     "Freelance technology & AI creative practice built on enterprise software engineering. Websites, vibe coding, SEO, AI art/video/3D, advertising. Separate stock-market knowledge sharing.",
   author: "LeyBros Private Ltd.",
   email: "hello@leybros.com",
   nav: [
-    { label: "Build", href: "/build" },
-    { label: "Create", href: "/create" },
-    { label: "Observe", href: "/observe" },
+    { label: "Web", href: "/web" },
+    { label: "AI", href: "/ai" },
+    { label: "Market Insight", href: "/market-insight" },
     { label: "About", href: "/about" },
     { label: "Contact", href: "/contact" },
   ],
   concept: {
     build: {
-      title: "BUILD",
+      title: "WEB",
       desc: "Software engineering foundation → vibe coding, websites, web apps, SEO. Performance, structure, search-ready.",
       color: "#0ea5e9",
     },
     create: {
-      title: "CREATE",
+      title: "AI",
       desc: "AI image enhancement, generation, video, 3D visualization, product & architectural renders, advertising creatives.",
       color: "#a855f7",
     },
     observe: {
-      title: "OBSERVE",
+      title: "MARKET INSIGHT",
       desc: "Private investing lens — micro/small-cap market observation, price action, knowledge sharing. Not a service.",
       color: "#f59e0b",
     },

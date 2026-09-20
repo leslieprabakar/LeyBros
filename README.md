@@ -1,10 +1,10 @@
-# LeyBros Private Ltd. — BUILD • CREATE • OBSERVE
+# LeyBros Private Ltd. — Web • AI • Market Insight
 
 Freelance technology & AI creative practice on an enterprise engineering foundation.
 
-- **BUILD**: Websites, web apps, vibe coding, SEO (Next.js, Tailwind, Supabase, performance, Search Console)
-- **CREATE**: AI image enhancement/generation, video, 3D, product/architecture viz, UGC/cinematic ads
-- **OBSERVE**: Private investor — micro/small-cap observation. **Educational knowledge-sharing only, not a service.** Not SEBI-registered, no buy/sell calls.
+- **WEB**: Websites, web apps, vibe coding, SEO (Next.js, Tailwind, Supabase, performance, Search Console)
+- **AI**: AI image enhancement/generation, video, 3D, product/architecture viz, UGC/cinematic ads
+- **MARKET INSIGHT**: Private investor — micro/small-cap observation. **Educational knowledge-sharing only, not a service.** Not SEBI-registered, no buy/sell calls.
 
 ## Stack
 Next.js 16 (App Router, webpack), Tailwind 4, TypeScript, Resend, Vercel.
@@ -33,4 +33,4 @@ git push -u origin main
 ```
 
 ## Routes
-`/`, `/build`, `/create`, `/observe`, `/about`, `/contact`, `/sitemap.xml`, `/robots.txt`
+`/`, `/web`, `/ai`, `/market-insight`, `/about`, `/contact`, `/sitemap.xml`, `/robots.txt`

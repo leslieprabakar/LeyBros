@@ -16,9 +16,9 @@ export default function AboutPage() {
           </p>
           <div className="mt-6 space-y-2 text-sm">
             <div className="flex gap-3"><span className="text-zinc-500 w-16">FORMER</span><span className="text-white">Software Engineer</span></div>
-            <div className="flex gap-3"><span className="text-[#C9A86A] w-16">BUILD</span><span className="text-white">Enterprise experience → Freelancing → Websites → SEO</span></div>
-            <div className="flex gap-3"><span className="text-[#C9A86A] w-16">CREATE</span><span className="text-white">AI art / enhancement / video / 3D / UGC & cinematic ads</span></div>
-            <div className="flex gap-3"><span className="text-amber-300 w-16">OBSERVE</span><span className="text-white">Private investor → Stock-market knowledge sharing (education only)</span></div>
+            <div className="flex gap-3"><span className="text-[#C9A86A] w-16">WEB</span><span className="text-white">Enterprise experience → Freelancing → Websites → SEO</span></div>
+            <div className="flex gap-3"><span className="text-[#C9A86A] w-16">AI</span><span className="text-white">AI art / enhancement / video / 3D / UGC & cinematic ads</span></div>
+            <div className="flex gap-3"><span className="text-amber-300 w-16">MARKET INSIGHT</span><span className="text-white">Private investor → Stock-market knowledge sharing (education only)</span></div>
           </div>
           <div className="mt-6 h-px bg-gradient-to-r from-[#C9A86A]/20 to-transparent" />
           <p className="mt-4 font-script text-xl text-[#C9A86A]/70">Leslie</p>

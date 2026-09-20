@@ -34,23 +34,23 @@ export function Hero() {
             <p className="mt-3 font-script text-[20px] text-[#C9A86A]/70">Leslie — Former Software Engineer, Atos → LTM → TCS</p>
 
             <div className="mt-7 flex flex-wrap gap-3">
-              <Link href="/build" className="rounded-full bg-[#C9A86A] px-7 py-3.5 text-[14px] font-semibold tracking-wide text-[#081410] hover:bg-[#D4B78A] transition">VIEW PORTFOLIO →</Link>
+              <Link href="/web" className="rounded-full bg-[#C9A86A] px-7 py-3.5 text-[14px] font-semibold tracking-wide text-[#081410] hover:bg-[#D4B78A] transition">VIEW PORTFOLIO →</Link>
               <Link href="/contact" className="rounded-full border border-[#C9A86A]/30 bg-[#C9A86A]/5 px-7 py-3.5 text-[14px] font-semibold tracking-wide text-[#E8D5B5] hover:bg-[#C9A86A]/10 transition">BOOK A CALL</Link>
             </div>
 
             <div className="mt-8 grid grid-cols-3 gap-3 max-w-xl">
               <div className="rounded-xl border border-[#C9A86A]/10 bg-[#10201A]/60 p-4">
-                <div className="text-[13px] tracking-[0.14em] text-[#C9A86A]">BUILD</div>
+                <div className="text-[13px] tracking-[0.14em] text-[#C9A86A]">WEB</div>
                 <div className="mt-1 text-[15px] text-white">Websites • Webapps • SEO</div>
                 <div className="text-[13px] text-zinc-500">Vibe coding • performance</div>
               </div>
               <div className="rounded-xl border border-[#C9A86A]/10 bg-[#10201A]/60 p-4">
-                <div className="text-[13px] tracking-[0.14em] text-[#C9A86A]">CREATE</div>
+                <div className="text-[13px] tracking-[0.14em] text-[#C9A86A]">AI</div>
                 <div className="mt-1 text-[15px] text-white">AI Art • Video • 3D</div>
                 <div className="text-[13px] text-zinc-500">Product • Arch • Ads</div>
               </div>
               <div className="rounded-xl border border-amber-500/15 bg-amber-500/[0.06] p-4">
-                <div className="text-[13px] tracking-[0.14em] text-amber-300">OBSERVE</div>
+                <div className="text-[13px] tracking-[0.14em] text-amber-300">MARKET INSIGHT</div>
                 <div className="mt-1 text-[15px] text-white">Market notes</div>
                 <div className="text-[13px] text-zinc-500">Education only</div>
               </div>
@@ -87,7 +87,7 @@ export function Hero() {
 
               {/* circular badge absolute */}
               <div className="absolute bottom-6 right-6 hidden sm:block">
-                <CircularBadge text="BUILD • CREATE • OBSERVE • " />
+                <CircularBadge text="Web • AI • Market Insight • " />
               </div>
 
               {/* evolution */}

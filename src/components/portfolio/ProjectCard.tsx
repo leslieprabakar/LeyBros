@@ -28,7 +28,7 @@ export function ProjectCard({ p }: { p: Project }) {
           {p.tags.slice(0,3).map(t=> <span key={t} className="rounded-full bg-white/5 border border-white/5 px-2.5 py-1 text-[12px] tracking-wide text-zinc-300">{t}</span>)}
         </div>
         <div className="mt-4 flex gap-2">
-          <Link href={p.category==="build" ? "/build" : "/create"} className="text-[14px] font-semibold text-[#E8D5B5] hover:underline">View hub →</Link>
+          <Link href={p.category==="build" ? "/web" : "/ai"} className="text-[14px] font-semibold text-[#E8D5B5] hover:underline">View hub →</Link>
           {isPlaceholder && <span className="text-[13px] text-zinc-500">• drop asset to publish</span>}
         </div>
       </div>

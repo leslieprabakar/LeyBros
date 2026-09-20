@@ -4,12 +4,12 @@ import { buildProjects } from "@/data/projects";
 import { PricingCard, buildTiers } from "@/components/ui/PricingCard";
 import Link from "next/link";
 
-export const metadata = { title: "Build — Websites, Vibe Coding, SEO", description: "Build lane: websites, web apps, vibe coding, SEO — engineering that ships and ranks." };
+export const metadata = { title: "Web — Websites, Vibe Coding, SEO", description: "Web lane: websites, web apps, vibe coding, SEO — engineering that ships and ranks." };
 
 export default function BuildPage() {
   return (
     <div className="mx-auto max-w-[1280px] px-4 sm:px-6 py-10">
-      <SectionHeader kicker="BUILD — SOFTWARE → PRESENCE" title="Websites, web apps, vibe coding, SEO." desc="Everything starts with structure — semantic HTML, performant code, search-ready architecture. The site itself is the SEO demo." />
+      <SectionHeader kicker="WEB — SOFTWARE → PRESENCE" title="Websites, web apps, vibe coding, SEO." desc="Everything starts with structure — semantic HTML, performant code, search-ready architecture. The site itself is the SEO demo." />
       <div className="mt-6 grid gap-4 md:grid-cols-3">
         {[
           {k:"WEBSITE DEVELOPMENT", t:"Creation • Web apps • Responsive • UI/UX", d:"Next.js + Supabase + Tailwind. Vibe-coded where it speeds you up, engineered where it must last."},
@@ -38,7 +38,7 @@ export default function BuildPage() {
       </div>
 
       <div className="mt-12">
-        <h3 className="font-display text-sm tracking-[0.14em] text-zinc-400">CASE STUDIES — BUILD</h3>
+        <h3 className="font-display text-sm tracking-[0.14em] text-zinc-400">CASE STUDIES — WEB</h3>
         <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {buildProjects.map(p=> <ProjectCard key={p.slug} p={p} />)}
         </div>

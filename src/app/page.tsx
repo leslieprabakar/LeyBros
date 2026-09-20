@@ -61,14 +61,14 @@ export default function Home() {
             <div className="inline-flex items-center gap-2 text-[13px] tracking-[0.18em] text-[#C9A86A]"><span>✦</span> SELECTED WORK</div>
             <h2 className="mt-2 font-display text-[30px] sm:text-[34px] font-medium text-white">A selection of my recent work</h2>
           </div>
-          <Link href="/create" className="hidden sm:inline-flex text-[14px] tracking-wide text-[#C9A86A] hover:text-[#E8D5B5]">EXPLORE ALL PROJECTS →</Link>
+          <Link href="/ai" className="hidden sm:inline-flex text-[14px] tracking-wide text-[#C9A86A] hover:text-[#E8D5B5]">EXPLORE ALL PROJECTS →</Link>
         </div>
         <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {projects.slice(0,6).map(p=> <ProjectCard key={p.slug} p={p} />)}
         </div>
         <div className="mt-4 flex flex-wrap gap-2">
-          <Link href="/build" className="rounded-full bg-[#C9A86A] px-6 py-2.5 text-[14px] font-semibold text-[#081410] hover:bg-[#D4B78A]">View BUILD case studies</Link>
-          <Link href="/create" className="rounded-full border border-[#C9A86A]/20 px-6 py-2.5 text-[14px] font-semibold text-[#E8D5B5] hover:bg-[#C9A86A]/10">View CREATE visuals</Link>
+          <Link href="/web" className="rounded-full bg-[#C9A86A] px-6 py-2.5 text-[14px] font-semibold text-[#081410] hover:bg-[#D4B78A]">View WEB case studies</Link>
+          <Link href="/ai" className="rounded-full border border-[#C9A86A]/20 px-6 py-2.5 text-[14px] font-semibold text-[#E8D5B5] hover:bg-[#C9A86A]/10">View AI visuals</Link>
         </div>
         <p className="mt-3 text-[13px] text-zinc-400">Tip: drop images into <code className="px-1.5 py-0.5 bg-white/10 rounded text-[12px]">/public/portfolio/</code> and flip <code className="text-[12px]">status: placeholder → published</code> in <code className="text-[12px]">src/data/projects.ts</code></p>
       </section>
@@ -110,7 +110,7 @@ export default function Home() {
                 ["Atos Syntel", "Enterprise foundation"],
                 ["LTM Limited", "LTM Limited — not LTIMindtree"],
                 ["Tata Consultancy Services (TCS)", "Large-scale delivery"],
-                ["LeyBros Private Ltd. — Freelancer", "Build → Create → Observe"],
+                ["LeyBros Private Ltd. — Freelancer", "Web → AI → Market Insight"],
               ].map(([org, note])=>(
                 <div key={org} className="flex gap-3">
                   <div className="h-2 w-2 mt-2.5 rounded-full bg-[#C9A86A] shrink-0" />
@@ -187,8 +187,8 @@ export default function Home() {
             <strong className="text-zinc-200">Disclaimer:</strong> Private investor, not SEBI-registered. Educational only. Not personalized advice. Historical ≠ future.
           </div>
           <div className="mt-4 flex flex-wrap gap-3">
-            <Link href="/observe" className="rounded-full bg-amber-500 px-7 py-3.5 text-[14px] font-semibold text-black hover:bg-amber-400">Explore the Knowledge Program →</Link>
-            <Link href="/contact?intent=observe" className="rounded-full border border-amber-500/25 px-7 py-3.5 text-[14px] font-semibold text-amber-200 hover:bg-amber-500/10">Enquire — Knowledge Program</Link>
+            <Link href="/market-insight" className="rounded-full bg-amber-500 px-7 py-3.5 text-[14px] font-semibold text-black hover:bg-amber-400">Explore the Knowledge Program →</Link>
+            <Link href="/contact?intent=market-insight" className="rounded-full border border-amber-500/25 px-7 py-3.5 text-[14px] font-semibold text-amber-200 hover:bg-amber-500/10">Enquire — Knowledge Program</Link>
           </div>
         </div>
       </section>

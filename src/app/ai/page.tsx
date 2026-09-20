@@ -4,12 +4,12 @@ import { createProjects } from "@/data/projects";
 import { PricingCard, createTiers } from "@/components/ui/PricingCard";
 import Link from "next/link";
 
-export const metadata = { title: "Create — AI Art, Video, 3D, Ads", description: "Create lane: AI image enhancement & generation, video, 3D visualization, product/architecture, UGC ads." };
+export const metadata = { title: "AI — Art, Video, 3D, Ads", description: "AI lane: image enhancement & generation, video, 3D visualization, product/architecture, UGC ads." };
 
 export default function CreatePage() {
   return (
     <div className="mx-auto max-w-[1280px] px-4 sm:px-6 py-10">
-      <SectionHeader kicker="CREATE — INPUT → TRANSFORMATION → FINAL" title="AI art, video, 3D, advertising." desc="Large visuals do the explaining. Hover, lightbox, before/after — the craft is the caption." />
+      <SectionHeader kicker="AI — INPUT → TRANSFORMATION → FINAL" title="AI art, video, 3D, advertising." desc="Large visuals do the explaining. Hover, lightbox, before/after — the craft is the caption." />
       <div className="mt-6 flex flex-wrap gap-2 text-xs">
         {["IMAGE","ENHANCEMENT","PRODUCT","ARCHITECTURE","CINEMATIC","ADVERTISING","VIDEO","3D"].map(t=> <span key={t} className="rounded-full border border-[#C9A86A]/12 bg-[#10201A]/60 px-3 py-1 text-zinc-300">{t}</span>)}
       </div>

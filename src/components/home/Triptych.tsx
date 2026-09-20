@@ -1,9 +1,9 @@
 import Link from "next/link";
 
 const items = [
-  { k:"BUILD", title:"Code that becomes presence", desc:"Enterprise-grade engineering → modern vibe coding. Websites, web apps, SEO structure that scores on Core Web Vitals.", href:"/build" },
-  { k:"CREATE", title:"Images that move people", desc:"AI-assisted art, photoreal product/architecture, cinematic video, 3D exploded views, UGC reels — built to sell.", href:"/create" },
-  { k:"OBSERVE", title:"Notes before narratives", desc:"Private investor practice. Screens, price action, volume/delivery, breakouts — taught with screenshots, not promises.", href:"/observe" },
+  { k:"WEB", title:"Code that becomes presence", desc:"Enterprise-grade engineering → modern vibe coding. Websites, web apps, SEO structure that scores on Core Web Vitals.", href:"/web" },
+  { k:"AI", title:"Images that move people", desc:"AI-assisted art, photoreal product/architecture, cinematic video, 3D exploded views, UGC reels — built to sell.", href:"/ai" },
+  { k:"MARKET INSIGHT", title:"Notes before narratives", desc:"Private investor practice. Screens, price action, volume/delivery, breakouts — taught with screenshots, not promises.", href:"/market-insight" },
 ];
 
 export function Triptych() {
@@ -16,7 +16,7 @@ export function Triptych() {
             <div className="flex items-center gap-2 text-[13px] tracking-[0.18em] text-[#C9A86A]"><span>✦</span> {it.k}</div>
             <div className="mt-3 font-display text-[20px] font-medium leading-tight text-white">{it.title}</div>
             <p className="mt-2 text-[15px] leading-7 text-zinc-300">{it.desc}</p>
-            <div className="mt-4 text-[14px] font-semibold tracking-wide text-[#E8D5B5] group-hover:underline">{it.k==="BUILD" ? "Explore Build" : it.k==="CREATE" ? "Explore Create" : "Enter Observe"} →</div>
+            <div className="mt-4 text-[14px] font-semibold tracking-wide text-[#E8D5B5] group-hover:underline">{it.k==="WEB" ? "Explore Web" : it.k==="AI" ? "Explore AI" : "Enter Market Insight"} →</div>
           </Link>
         ))}
       </div>

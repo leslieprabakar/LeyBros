@@ -9,10 +9,10 @@ export default async function ContactPage({ searchParams }: { searchParams?: Pro
       <SectionHeader kicker="CONTACT — PREMIUM ENQUIRY" title="Two lanes, one inbox — choose your intent." desc="Freelance client enquiries and knowledge-program enquiries are handled separately. Pick the lane so context stays clean." />
       <div className="mt-8 grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
         <form action="#" method="post" className="rounded-[16px] border border-[#C9A86A]/12 bg-[#10201A]/60 p-6 grid gap-4">
-          {intent === "observe" && <div className="rounded-xl border border-amber-500/20 bg-amber-500/10 p-3 text-xs text-amber-200">Knowledge Program intent pre-selected — education only, not advice. You can switch below.</div>}
+          {intent === "market-insight" && <div className="rounded-xl border border-amber-500/20 bg-amber-500/10 p-3 text-xs text-amber-200">Knowledge Program intent pre-selected — education only, not advice. You can switch below.</div>}
           <div className="grid gap-2">
             <label htmlFor="category" className="text-xs tracking-[0.12em] text-zinc-400">CATEGORY *</label>
-            <select id="category" name="category" defaultValue={intent==="observe" ? "stock-knowledge" : ""} className="rounded-xl border border-[#C9A86A]/15 bg-[#081410] px-3 py-3 text-sm text-white" required>
+            <select id="category" name="category" defaultValue={intent==="market-insight" ? "stock-knowledge" : ""} className="rounded-xl border border-[#C9A86A]/15 bg-[#081410] px-3 py-3 text-sm text-white" required>
               <option value="" disabled>Select one</option>
               <option value="website">Website Development — ₹4,999 onwards</option>
               <option value="seo">SEO — ₹1,999/mo</option>
@@ -44,7 +44,7 @@ export default async function ContactPage({ searchParams }: { searchParams?: Pro
           </div>
           <div className="rounded-[16px] border border-amber-500/15 bg-amber-500/[0.06] p-6 text-xs leading-5 text-zinc-400">
             <div className="text-sm font-semibold text-amber-200">Separate lanes matter</div>
-            <p className="mt-2">Stock-market mentorship is <span className="text-zinc-200">not</span> bundled with freelance services. No buy/sell calls. If you’re here for a website, choose a BUILD/CREATE category.</p>
+            <p className="mt-2">Stock-market mentorship is <span className="text-zinc-200">not</span> bundled with freelance services. No buy/sell calls. If you’re here for a website, choose a WEB/AI category.</p>
           </div>
           <div className="rounded-[16px] border border-[#C9A86A]/12 bg-[#081410] p-4 text-[11px] leading-5 text-zinc-500">
             Email direct: <a href="mailto:hello@leybros.com" className="text-[#E8D5B5] hover:underline">hello@leybros.com</a> • Websites ₹4,999–18,999 • AI ₹5,999–14,999

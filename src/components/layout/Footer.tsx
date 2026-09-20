@@ -10,30 +10,30 @@ export function Footer() {
             <img src="/brand/logo.png" alt="LeyBros" className="h-8 w-auto" />
           </span>
           <p className="mt-3 max-w-md text-[15px] leading-7 text-zinc-400">
-            Freelance technology & AI creative practice on a genuine software-engineering foundation. Build systems. Create visuals. Observe markets.
+            Freelance technology & AI creative practice on a genuine software-engineering foundation. Web systems. AI visuals. Market insight.
           </p>
           <p className="mt-4 text-[13px] tracking-wide text-zinc-400">Formerly: Atos Syntel → LTM Limited → TCS</p>
           <div className="mt-6 flex gap-2 text-[13px] tracking-wide">
-            <span className="rounded-full border border-[#C9A86A]/15 bg-[#C9A86A]/5 px-3.5 py-1.5 text-[#E8D5B5]">BUILD</span>
-            <span className="rounded-full border border-[#C9A86A]/15 bg-[#C9A86A]/5 px-3.5 py-1.5 text-[#E8D5B5]">CREATE</span>
-            <span className="rounded-full border border-[#C9A86A]/15 bg-[#C9A86A]/5 px-3.5 py-1.5 text-[#E8D5B5]">OBSERVE</span>
+            <span className="rounded-full border border-[#C9A86A]/15 bg-[#C9A86A]/5 px-3.5 py-1.5 text-[#E8D5B5]">WEB</span>
+            <span className="rounded-full border border-[#C9A86A]/15 bg-[#C9A86A]/5 px-3.5 py-1.5 text-[#E8D5B5]">AI</span>
+            <span className="rounded-full border border-[#C9A86A]/15 bg-[#C9A86A]/5 px-3.5 py-1.5 text-[#E8D5B5]">MARKET INSIGHT</span>
           </div>
         </div>
         <div>
           <div className="text-[13px] tracking-[0.14em] text-[#C9A86A]">FREELANCE SERVICES</div>
           <ul className="mt-3 space-y-2 text-[15px] text-zinc-300">
-            <li><Link href="/build" className="hover:text-[#E8D5B5]">Website Development & Vibe Coding</Link></li>
-            <li><Link href="/build" className="hover:text-[#E8D5B5]">SEO — Technical & Structure</Link></li>
-            <li><Link href="/create" className="hover:text-[#E8D5B5]">AI Art & Image Enhancement</Link></li>
-            <li><Link href="/create" className="hover:text-[#E8D5B5]">AI Video & 3D Visualization</Link></li>
-            <li><Link href="/create" className="hover:text-[#E8D5B5]">Advertising & UGC Reels</Link></li>
+            <li><Link href="/web" className="hover:text-[#E8D5B5]">Website Development & Vibe Coding</Link></li>
+            <li><Link href="/web" className="hover:text-[#E8D5B5]">SEO — Technical & Structure</Link></li>
+            <li><Link href="/ai" className="hover:text-[#E8D5B5]">AI Art & Image Enhancement</Link></li>
+            <li><Link href="/ai" className="hover:text-[#E8D5B5]">AI Video & 3D Visualization</Link></li>
+            <li><Link href="/ai" className="hover:text-[#E8D5B5]">Advertising & UGC Reels</Link></li>
           </ul>
         </div>
         <div>
           <div className="text-[13px] tracking-[0.14em] text-[#C9A86A]">KNOWLEDGE — SEPARATE</div>
           <ul className="mt-3 space-y-2 text-[15px] text-zinc-300">
-            <li><Link href="/observe" className="hover:text-[#E8D5B5]">Stock-Market Knowledge Sharing</Link></li>
-            <li><Link href="/contact?intent=observe" className="hover:text-[#E8D5B5]">Enquire — Knowledge Program</Link></li>
+            <li><Link href="/market-insight" className="hover:text-[#E8D5B5]">Stock-Market Knowledge Sharing</Link></li>
+            <li><Link href="/contact?intent=market-insight" className="hover:text-[#E8D5B5]">Enquire — Knowledge Program</Link></li>
             <li><Link href="/about" className="hover:text-[#E8D5B5]">About & Timeline</Link></li>
             <li><Link href="/contact" className="hover:text-[#E8D5B5]">Contact — Split Enquiry</Link></li>
           </ul>

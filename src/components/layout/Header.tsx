@@ -13,9 +13,12 @@ export function Header() {
           <span className="bg-white rounded-full px-3 py-1.5 flex items-center shadow-[0_2px_10px_rgba(0,0,0,0.15)] border border-[#C9A86A]/10">
             <Image src="/brand/logo.png" alt="LeyBros" width={180} height={52} className="h-7 sm:h-8 w-auto object-contain" priority />
           </span>
-          <div className="hidden sm:block">
-            <div className="font-display text-[11px] font-semibold tracking-[0.14em] leading-none text-[#C9A86A]/70">PRIVATE LTD.</div>
-            <div className="text-[10px] tracking-[0.18em] text-zinc-500">{site.tagline}</div>
+          <div className="hidden sm:block leading-none">
+            <div className="font-display text-[13px] font-semibold tracking-[0.10em] text-[#E8D5B5] group-hover:text-[#C9A86A] transition">LeyBros Private Ltd.,</div>
+            <div className="mt-0.5 flex items-center gap-1.5 text-[10px] tracking-[0.18em] text-zinc-500">
+              <span className="h-px w-4 bg-gradient-to-r from-[#C9A86A]/40 to-transparent hidden sm:inline-block"></span>
+              {site.tagline}
+            </div>
           </div>
         </Link>
 
