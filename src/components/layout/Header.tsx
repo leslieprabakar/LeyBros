@@ -10,7 +10,7 @@ export function Header() {
     <header className="sticky top-0 z-50 border-b border-[#C9A86A]/10 bg-[#081410]/80 backdrop-blur-xl">
       <div className="mx-auto max-w-[1280px] px-4 sm:px-6 flex h-[64px] items-center justify-between">
         <Link href="/" className="flex items-center gap-3 group">
-          <Image src="/brand/logo.png" alt="LeyBros" width={180} height={52} className="h-8 sm:h-9 w-auto object-contain" priority />
+          <Image src="/brand/logo-light.png" alt="LeyBros" width={180} height={52} className="h-8 sm:h-9 w-auto object-contain" priority />
           <div className="hidden sm:block">
             <div className="font-display text-[11px] font-semibold tracking-[0.14em] leading-none text-[#C9A86A]/70">PRIVATE LTD.</div>
             <div className="text-[10px] tracking-[0.18em] text-zinc-500">{site.tagline}</div>
