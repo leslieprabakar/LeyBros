@@ -12,7 +12,7 @@ export function Hero() {
 
       <div className="mx-auto max-w-[1280px] px-4 sm:px-6 pt-10 sm:pt-14 pb-10">
         <div className="flex flex-wrap items-center gap-2 text-[13px] tracking-[0.18em] text-[#C9A86A]/80">
-          <span>✦</span> LESLIE PRABAKAR — B.TECH IT FIRST CLASS DISTINCTION <span className="hidden sm:inline text-zinc-600">—</span> <span className="text-zinc-400">SILVER MEDAL • 8 YEARS • TCS • L&T INFOTECH • SYNTEL • HARVARD/LAPIZ</span>
+          <span>✦</span> LESLIE PRABAKAR — 8 YEARS • B.TECH IT DISTINCTION <span className="hidden sm:inline text-zinc-600">—</span> <span className="text-zinc-400">TCS • L&T INFOTECH • HARVARD/LAPIZ</span>
           <span className="ml-auto hidden sm:inline-flex items-center gap-2 rounded-full border border-[#C9A86A]/20 bg-[#C9A86A]/10 px-3 py-1.5 text-[12px] tracking-[0.14em] text-[#E8D5B5]">● AVAILABLE FOR PROJECTS</span>
         </div>
 
@@ -22,12 +22,12 @@ export function Hero() {
               <span className="block font-display text-[48px] sm:text-[72px] font-light tracking-tight text-[#E8D5B5]">LESLIE</span>
               <span className="block font-display text-[48px] sm:text-[72px] font-semibold tracking-tight text-[#C9A86A] -mt-2">PRABAKAR</span>
               <span className="block mt-3 font-script text-[32px] sm:text-[36px] text-[#C9A86A]/90 leading-none">LeyBros Private Ltd.</span>
-              <span className="block font-display text-[18px] sm:text-[22px] font-light tracking-[0.18em] text-zinc-400 mt-1">FREELANCE AI ENGINEER • VIBE CODER</span>
+              <span className="block font-display text-[18px] sm:text-[22px] font-light tracking-[0.18em] text-zinc-400 mt-1">FREELANCE TECHNOLOGY & AI</span>
             </h1>
             <p className="mt-5 max-w-xl text-[17px] leading-8 text-zinc-300">
-              8 years as Project Lead / Developer cum Tester (Java/J2EE, Struts, QTP/QC) at TCS (Citi, Qantas), L&T Infotech (Standard Life, Marsh), Syntel (John Hancock). Now freelance: vibe coding (VS Code/OpenCode), websites (Next.js, Tailwind, Supabase), AI visuals (Minimax M2.5, DeepSeek V4 Flash). Also decade+ private investor — proprietary Stepper strategy. Separate from this: Harvard/LAPIZ alt-text (Section 508).
+              Enterprise engineering (8 years at TCS, L&T Infotech, Syntel) now applied to vibe-coded websites, AI visuals and video/3D that rank and sell. Harvard/LAPIZ alt-text heritage means accessibility is default. Private markets observed separately — education only.
             </p>
-            <p className="mt-3 font-script text-[20px] text-[#C9A86A]/70">B.Tech IT — First Class with Distinction, IFET/Anna University • Silver Medal</p>
+            <p className="mt-3 font-script text-[18px] text-[#C9A86A]/70">B.Tech IT — First Class with Distinction • IFET/Anna University</p>
 
             <div className="mt-7 flex flex-wrap gap-3">
               <Link href="/build" className="rounded-full bg-[#C9A86A] px-7 py-3.5 text-[14px] font-semibold tracking-wide text-[#081410] hover:bg-[#D4B78A] transition">VIEW PORTFOLIO →</Link>
@@ -37,26 +37,26 @@ export function Hero() {
             <div className="mt-8 grid grid-cols-3 gap-3 max-w-xl">
               <div className="rounded-xl border border-[#C9A86A]/10 bg-[#10201A]/60 p-4">
                 <div className="text-[13px] tracking-[0.14em] text-[#C9A86A]">BUILD</div>
-                <div className="mt-1 text-[15px] text-white">Websites • Webapps • SEO</div>
-                <div className="text-[13px] text-zinc-400">Java/J2EE → Next.js</div>
+                <div className="mt-1 text-[15px] text-white">Websites • SEO</div>
+                <div className="text-[13px] text-zinc-400">Next.js • Performance</div>
               </div>
               <div className="rounded-xl border border-[#C9A86A]/10 bg-[#10201A]/60 p-4">
                 <div className="text-[13px] tracking-[0.14em] text-[#C9A86A]">CREATE</div>
-                <div className="mt-1 text-[15px] text-white">AI Art • Video • 3D + Alt-text</div>
+                <div className="mt-1 text-[15px] text-white">AI Visuals + Alt-text</div>
                 <div className="text-[13px] text-zinc-400">Harvard Section 508</div>
               </div>
               <div className="rounded-xl border border-amber-500/15 bg-amber-500/[0.06] p-4">
                 <div className="text-[13px] tracking-[0.14em] text-amber-300">OBSERVE</div>
-                <div className="mt-1 text-[15px] text-white">Stepper strategy</div>
-                <div className="text-[13px] text-zinc-500">Decade+ • Education only</div>
+                <div className="mt-1 text-[15px] text-white">Decade+ investor</div>
+                <div className="text-[13px] text-zinc-500">Stepper • Education</div>
               </div>
             </div>
 
             <div className="mt-6 flex flex-wrap gap-2">
-              <Badge variant="gold">B.Tech IT — Distinction & Silver Medal</Badge>
-              <Badge>TCS • L&T Infotech • Syntel • LAPIZ/Harvard</Badge>
-              <Badge variant="build">Minimax M2.5 • DeepSeek V4 Flash</Badge>
-              <Badge variant="observe">Decade+ Private Investor</Badge>
+              <Badge variant="gold">B.Tech IT — Distinction</Badge>
+              <Badge>TCS • L&T Infotech • Syntel • Harvard/LAPIZ</Badge>
+              <Badge variant="build">Vibe Coding</Badge>
+              <Badge variant="observe">Stepper — Private</Badge>
             </div>
           </div>
 
@@ -70,7 +70,7 @@ export function Hero() {
                 <div className="text-center">
                   <div className="mx-auto h-20 w-20 rounded-full bg-[#C9A86A]/10 border border-[#C9A86A]/20 grid place-items-center text-[#C9A86A] text-xl">LB</div>
                   <div className="mt-4 font-display text-xl text-[#E8D5B5]">Photo of Leslie</div>
-                  <p className="mt-2 text-[14px] leading-6 text-zinc-400 max-w-[260px]">Drop your photo to <code className="text-[#C9A86A]">public/brand/leslie-hero.webp</code> — arch will frame it automatically.</p>
+                  <p className="mt-2 text-[14px] leading-6 text-zinc-400 max-w-[260px]">Drop your photo to <code className="text-[#C9A86A]">public/brand/leslie-hero.webp</code></p>
                   <div className="mt-4 inline-flex rounded-full border border-dashed border-[#C9A86A]/30 px-4 py-2 text-[13px] tracking-wide text-zinc-400">Awaiting asset — integration ready</div>
                 </div>
               </div>
@@ -78,14 +78,13 @@ export function Hero() {
                 <CircularBadge text="BUILD • CREATE • OBSERVE • " />
               </div>
               <div className="relative mt-6 rounded-xl border border-[#C9A86A]/10 bg-black/30 p-4 backdrop-blur">
-                <div className="text-[13px] tracking-[0.14em] text-[#C9A86A]">EVOLUTION</div>
-                <div className="mt-3 space-y-2.5 text-[14px]">
+                <div className="text-[13px] tracking-[0.18em] text-[#C9A86A]">AT A GLANCE</div>
+                <div className="mt-3 space-y-2 text-[14px]">
                   {[
-                    ["B.Tech IT — IFET/Anna Univ", "First Class Distinction, Silver Medal"],
-                    ["Syntel → L&T Infotech → TCS", "8 years — Project Lead, Dev cum Tester"],
-                    ["LAPIZ — Harvard", "Alt-Text, Section 508 Specialist"],
-                    ["Freelance AI Engineer", "VibeCode • Minimax • DeepSeek"],
-                    ["Private Investor — Stepper", "Decade+ • Automated fundamentals & technicals"],
+                    ["B.Tech IT — IFET/Anna Univ", "First Class with Distinction"],
+                    ["8 years — Project Lead", "TCS • L&T • Syntel"],
+                    ["Harvard/LAPIZ", "Section 508 Alt-Text Specialist"],
+                    ["Freelance AI Engineer", "Minimax M2.5 • DeepSeek V4 Flash"],
                   ].map(([t,s])=>(
                     <div key={t} className="flex gap-3">
                       <div className="mt-1.5 h-1.5 w-1.5 rounded-full bg-[#C9A86A]" />
@@ -99,9 +98,9 @@ export function Hero() {
             <div className="mt-4 rounded-2xl border border-[#C9A86A]/10 bg-[#10201A]/80 p-5">
               <div className="text-[13px] tracking-[0.18em] text-[#C9A86A]">WHAT CLIENTS HIRE FOR</div>
               <ul className="mt-3 grid grid-cols-2 gap-2 text-[14px] text-zinc-300">
-                <li>✓ SEO-ready website?</li><li>✓ Product 3D / enhance?</li>
-                <li>✓ VibeCoded webapp?</li><li>✓ AI video / UGC reel?</li>
-                <li>✓ Harvard-grade alt-text?</li><li>✓ Stepper-based learning?</li>
+                <li>✓ Ranking website?</li><li>✓ Accessible build?</li>
+                <li>✓ Product 3D / enhance?</li><li>✓ AI video / reel?</li>
+                <li>✓ VibeCoded webapp?</li><li>✓ Stepper learning?</li>
               </ul>
             </div>
           </div>

@@ -19,14 +19,14 @@ export default function Home() {
       {/* Stats */}
       <section className="mx-auto max-w-[1280px] px-4 sm:px-6 py-8">
         <StatCounter items={[
-          { value: "8+", label: "YEARS SOFTWARE", sub: "Project Lead • Dev cum Tester" },
-          { value: "10+", label: "YEARS INVESTING", sub: "Stepper strategy • Private" },
-          { value: "First Class", label: "B.TECH IT DISTINCTION", sub: "IFET/Anna Univ • Silver Medal" },
-          { value: "Harvard", label: "LAPIZ ALT-TEXT", sub: "Section 508 • Accessibility" },
+          { value: "8+", label: "YEARS SOFTWARE", sub: "Project Lead • TCS • L&T • Syntel" },
+          { value: "First Class", label: "B.TECH IT", sub: "IFET/Anna Univ • Silver Medal" },
+          { value: "Harvard", label: "LAPIZ ALT-TEXT", sub: "Section 508" },
+          { value: "10+ yr", label: "PRIVATE INVESTOR", sub: "Stepper • Education only" },
         ]} />
       </section>
 
-      <Marquee items={["SYNTEL • JOHN HANCOCK","L&T INFOTECH • STANDARD LIFE & MARSH","TCS • CITI & QANTAS","LAPIZ • HARVARD","MINIMAX M2.5","DEEPSEEK V4 FLASH","STEPPER STRATEGY","NSE BHAVCOPY"]} />
+      <Marquee items={["TCS","L&T INFOTECH","SYNTEL","HARVARD/LAPIZ","NEXT.JS","TAILWIND","MINIMAX M2.5","DEEPSEEK V4 FLASH"]} />
 
       {/* Services — What I can help you with */}
       <section id="services" className="mx-auto max-w-[1280px] px-4 sm:px-6 py-12">
@@ -76,18 +76,17 @@ export default function Home() {
       {/* Technologies */}
       <section className="mx-auto max-w-[1280px] px-4 sm:px-6 py-6">
         <div className="rounded-[16px] border border-[#C9A86A]/10 bg-[#10201A]/40 p-6">
-          <div className="text-center text-[13px] tracking-[0.18em] text-[#C9A86A]">SOFTWARE • AI • TOOLS — DOCUMENTED STACK</div>
-          <div className="mt-4 flex flex-wrap justify-center gap-2 text-[13px]">
-            {["Java/J2EE","Struts 1.35","DQE","SOADA","Eclipse","QTP 9.2","QC","Toad","Wily Introscope","WebSphere 6.1","WebLogic 8.1","SQL Server","Oracle 9i","DB2"].map(t=>(
-              <span key={t} className="rounded-full border border-[#C9A86A]/10 bg-[#081410] px-3 py-1 text-zinc-400">{t}</span>
+          <div className="text-center text-[13px] tracking-[0.18em] text-[#C9A86A]">STACK — CURATED FOR CLIENTS</div>
+          <div className="mt-4 flex flex-wrap justify-center gap-2 text-[14px]">
+            {["Next.js","Tailwind CSS","Supabase","Vercel","Figma","VS Code","Java/J2EE","Struts"].map(t=>(
+              <span key={t} className="rounded-full border border-[#C9A86A]/10 bg-[#081410] px-3.5 py-1.5 text-zinc-300">{t}</span>
             ))}
           </div>
           <div className="mt-3 flex flex-wrap justify-center gap-2 text-[13px]">
-            {["Next.js","Tailwind CSS","Supabase","Vercel","Figma","VS Code","OpenCode","Minimax M2.5","DeepSeek V4 Flash","Hy3","Ling 2.6 Flash","Big Pickle","AmiBroker 5.70","Selenium","Screener.in","TradingView"].map(t=>(
-              <span key={t} className="rounded-full border border-[#C9A86A]/15 bg-[#C9A86A]/5 px-3 py-1 text-[#E8D5B5]">{t}</span>
+            {["Minimax M2.5","DeepSeek V4 Flash","Alt-Text • Section 508"].map(t=>(
+              <span key={t} className="rounded-full border border-[#C9A86A]/15 bg-[#C9A86A]/5 px-3.5 py-1.5 text-[#E8D5B5]">{t}</span>
             ))}
           </div>
-          <p className="mt-3 text-center text-[12px] text-zinc-500">8 years enterprise + freelance AI • Full list on About →</p>
         </div>
       </section>
 
@@ -97,9 +96,9 @@ export default function Home() {
           <div className="rounded-2xl border border-[#C9A86A]/12 bg-[#10201A]/60 p-6 sm:p-8 relative overflow-hidden">
             <div className="absolute -top-6 -right-6 text-[120px] font-display font-bold text-white/[0.03] leading-none">01</div>
             <div className="text-[13px] tracking-[0.18em] text-[#C9A86A]">ABOUT — LESLIE PRABAKAR</div>
-            <h3 className="mt-2 font-display text-[22px] sm:text-[26px] font-medium text-white leading-tight">B.Tech IT — First Class with Distinction.<br /><span className="text-[#C9A86A]">Silver Medal • IFET / Anna University</span></h3>
+            <h3 className="mt-2 font-display text-[22px] sm:text-[26px] font-medium text-white leading-tight">Enterprise roots. Freelance craft.<br /><span className="text-[#C9A86A]">B.Tech IT — Distinction • IFET/Anna Univ</span></h3>
             <p className="mt-4 text-[15px] leading-7 text-zinc-300">
-              8 years as Project Lead / Developer cum Tester (Java/J2EE, Struts) at Syntel (John Hancock), L&T Infotech (Standard Life, Marsh), TCS (Citi, Qantas). Freelance alt-text specialist for LAPIZ / Harvard (Section 508). Now freelance AI Engineer — vibe coding with VS Code/OpenCode, Minimax M2.5, DeepSeek V4 Flash & more. Private investor decade+ — Stepper.
+              8 years enterprise delivery at TCS, L&T Infotech, Syntel — now building with Next.js, Tailwind and AI-assisted visuals. Harvard/LAPIZ alt-text background means every site is accessible by default.
             </p>
             <div className="mt-5 grid grid-cols-3 gap-3 text-[14px]">
               <div className="rounded-xl bg-[#081410] border border-[#C9A86A]/10 p-3"><div className="text-[#C9A86A] font-medium">✓ Pixel-Perfect</div><div className="text-zinc-500 mt-1 text-[13px]">Clean, modern and user-focused</div></div>
@@ -183,9 +182,9 @@ export default function Home() {
             <span className="rounded-full border border-[#C9A86A]/10 px-3.5 py-1.5 text-[13px] text-zinc-300">Education only</span>
             <span className="rounded-full border border-[#C9A86A]/10 px-3.5 py-1.5 text-[13px] text-zinc-300">Not SEBI-registered</span>
           </div>
-          <h2 className="mt-4 font-display text-[28px] sm:text-[32px] font-medium text-white">Stock-market knowledge sharing — Stepper, not calls.</h2>
+          <h2 className="mt-4 font-display text-[28px] sm:text-[32px] font-medium text-white">Stock-market knowledge sharing — practical notes, not calls.</h2>
           <p className="mt-2 max-w-3xl text-[16px] leading-7 text-zinc-300">
-            Decade+ private investor (equities & derivatives) — proprietary Stepper, automated fundamentals & technicals. EOD Bhavcopy downloader, series-wise & band-shift filters, watchlist generation (AmiBroker AFL, Eclipse Java, Selenium, Screener.in, ChartInk, TradingView). Screenshots are evidence; education only.
+            Decade+ private investor — proprietary Stepper strategy. Research automated, shared as education. Screenshots are evidence; never advice.
           </p>
           <div className="mt-6 grid gap-4 sm:grid-cols-3">
             {observations.map(o=> <ObservationCard key={o.slug} o={o} />)}

@@ -4,7 +4,7 @@ export const site = {
   tagline: "BUILD • CREATE • OBSERVE",
   url: "https://leybros.com",
   description:
-    "Leslie Prabakar — 8 years software engineering (TCS, L&T Infotech, Syntel) + Freelance AI Engineer (VibeCode) + Alt-Text specialist (LAPIZ/Harvard). Private investor decade+ with proprietary Stepper strategy. Websites, AI visuals, video/3D, SEO. Observe is education only.",
+    "Leslie Prabakar — B.Tech IT First Class with Distinction (IFET/Anna Univ, Silver Medal), 8 years software engineering (TCS, L&T Infotech, Syntel), freelance AI & web practice, Harvard/LAPIZ accessibility. Private investor decade+.",
   author: "Leslie Prabakar Ruphas Vanathuraj",
   email: "hello@leybros.com",
   phone: "+91-99625 34351",
@@ -18,56 +18,44 @@ export const site = {
   education: {
     degree: "B.Tech., Information Technology — First Class with Distinction",
     college: "IFET College of Engineering, Affiliated to Anna University",
-    distinction: "Silver Medal Holder — Best Academic Performer",
+    distinction: "Silver Medal — Best Academic Performer",
   },
   concept: {
     build: {
       title: "BUILD",
-      desc: "8 years Java/J2EE, Struts, enterprise delivery → vibe coding, websites (Next.js, Tailwind, Supabase), SEO structure & performance.",
+      desc: "Enterprise engineering → vibe coding — websites, web apps, SEO. Performance and search-ready structure.",
       color: "#0ea5e9",
     },
     create: {
       title: "CREATE",
-      desc: "AI image enhancement/generation, video, 3D product/architecture, UGC/cinematic ads + Harvard-grade alt-text accessibility.",
+      desc: "AI visuals, video, 3D, product/architecture, UGC ads + Harvard-grade alt-text — accessibility included.",
       color: "#a855f7",
     },
     observe: {
       title: "OBSERVE",
-      desc: "Decade+ private investor (equities & derivatives) — proprietary Stepper strategy, automated fundamentals & technicals. Education only.",
+      desc: "Decade+ private investor — proprietary Stepper strategy. Automated research, educational sharing only.",
       color: "#f59e0b",
     },
   },
   timeline: [
-    { org: "Syntel Ltd.", note: "John Hancock (Canada) — EZk & PSW apps, QTP 9.2 / QC" },
-    { org: "L&T Infotech Ltd. (LTM Limited)", note: "Standard Life (UK), Marsh & McLennan (Australia) — enterprise delivery" },
-    { org: "Tata Consultancy Services (TCS)", note: "Citi (USA) & Qantas (Australia) — large-scale Java/J2EE, Struts" },
-    { org: "LAPIZ Digital Services", note: "Harvard University publications — Alt-Text writer, Section 508 accessibility" },
-    { org: "Freelance AI Engineer (VibeCoder)", note: "VS Code / OpenCode + Minimax M2.5, DeepSeek V4 Flash, Big Pickle, Hy3, Ling 2.6 Flash" },
-    { org: "LeyBros Private Ltd.", note: "Private Investor decade+ — Stepper strategy + automated Bhavcopy/watchlists" },
+    { org: "Syntel Ltd.", note: "John Hancock (Canada)" },
+    { org: "L&T Infotech Ltd.", note: "Standard Life (UK) • Marsh (Australia)" },
+    { org: "Tata Consultancy Services", note: "Citi (USA) • Qantas (Australia)" },
+    { org: "LAPIZ — Harvard University", note: "Alt-Text writer • Section 508 accessibility" },
+    { org: "Freelance AI Engineer", note: "VibeCode • Minimax M2.5 • DeepSeek V4 Flash" },
   ],
   recognitions: [
-    "Organization-level paper presentation — SEO for revenue in $",
-    "Runner-up, Business Unit competition — L&T Infotech Ltd.",
-    "Silver Medal — IFET College of Engineering (Anna University)",
+    "Silver Medal — IFET/Anna University (Best Academic Performer)",
+    "Paper presentation — SEO for revenue in $ (Organization level)",
   ],
   skills: {
-    languages: ["Java/J2EE (XML, XSD)", "VB scripting (automation testing)"],
-    frameworks: ["Struts 1.35", "Dynamic Question Engine (DQE)", "SOADA"],
-    products: ["Eclipse IDE 3.2", "RAD", "Eclipse Java EE Galileo", "QTP 9.2", "QC", "Toad", "XML Spy", "Wily Introscope 9.0.5", "Sybase Portal", "Putty", "WinSCP", "SOAP UI 3.6.1", "TIBCO Hawk", "SiteScope", "Keynote"],
-    databases: ["SQL Server", "Oracle 9i", "DB2"],
-    servers: ["WebSphere 6.1", "WebLogic 8.1"],
-    modern: ["Next.js", "Tailwind CSS", "Supabase", "Vercel", "Figma", "VS Code", "OpenCode"],
-    ai: ["Minimax M2.5", "DeepSeek V4 Flash", "Big Pickle", "Hy3", "Ling 2.6 Flash"],
-    testing: ["JUnit", "QTP 9.2 (VB)", "Quality Center"],
+    // curated — client-facing only
+    modern: ["Next.js", "Tailwind CSS", "Supabase", "Vercel", "TypeScript", "Figma"],
+    heritage: ["Java/J2EE", "Struts"],
+    ai: ["Minimax M2.5", "DeepSeek V4 Flash"],
   },
   stock: {
-    summary: "Decade+ Private Investor (Equities & Derivatives) — proprietary Stepper strategy, automated fundamentals & technicals.",
-    bullets: [
-      "Built fully automated EOD Bhavcopy downloader for NSE Equities & Options",
-      "Developed series-wise and band-shift data modules to filter high-momentum scrips",
-      "Designed & implemented fundamental + technical strategies with automated watchlist generation",
-      "Tools: AmiBroker 5.70 (AFL), Eclipse (Java), Selenium, Excel Live helper, Screener.in, ChartInk, TradingView",
-    ],
+    summary: "Decade+ Private Investor — proprietary Stepper strategy. Education only, not SEBI-registered.",
   },
   seo: {
     keywords: [
@@ -78,10 +66,8 @@ export const site = {
       "SEO",
       "AI art",
       "AI video",
-      "3D visualization",
       "alt text",
-      "Stepper strategy",
-      "NSE",
+      "Stepper",
     ],
   },
 } as const;
