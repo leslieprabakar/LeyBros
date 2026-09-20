@@ -19,14 +19,14 @@ export default function Home() {
       {/* Stats */}
       <section className="mx-auto max-w-[1280px] px-4 sm:px-6 py-8">
         <StatCounter items={[
-          { value: "10+", label: "YEARS ENGINEERING", sub: "Atos • LTM • TCS foundation" },
-          { value: "40+", label: "PROJECTS DELIVERED", sub: "Websites, apps, creatives" },
-          { value: "25+", label: "HAPPY CLIENTS", sub: "Startups to enterprises" },
-          { value: "100%", label: "DEDICATION", sub: "One practice, distinct lanes" },
+          { value: "8+", label: "YEARS SOFTWARE", sub: "Project Lead • Dev cum Tester" },
+          { value: "10+", label: "YEARS INVESTING", sub: "Stepper strategy • Private" },
+          { value: "First Class", label: "B.TECH IT DISTINCTION", sub: "IFET/Anna Univ • Silver Medal" },
+          { value: "Harvard", label: "LAPIZ ALT-TEXT", sub: "Section 508 • Accessibility" },
         ]} />
       </section>
 
-      <Marquee items={["ATOS SYNTEL","LTM LIMITED","TCS","NEXT.JS","SUPABASE","TAILWIND","VERCEL","FIGMA","AI CREATIVES"]} />
+      <Marquee items={["SYNTEL • JOHN HANCOCK","L&T INFOTECH • STANDARD LIFE & MARSH","TCS • CITI & QANTAS","LAPIZ • HARVARD","MINIMAX M2.5","DEEPSEEK V4 FLASH","STEPPER STRATEGY","NSE BHAVCOPY"]} />
 
       {/* Services — What I can help you with */}
       <section id="services" className="mx-auto max-w-[1280px] px-4 sm:px-6 py-12">
@@ -76,12 +76,18 @@ export default function Home() {
       {/* Technologies */}
       <section className="mx-auto max-w-[1280px] px-4 sm:px-6 py-6">
         <div className="rounded-[16px] border border-[#C9A86A]/10 bg-[#10201A]/40 p-6">
-          <div className="text-center text-[13px] tracking-[0.18em] text-[#C9A86A]">SKILLS & TOOLS — TECHNOLOGIES I WORK WITH</div>
-          <div className="mt-4 flex flex-wrap justify-center gap-2 text-[14px]">
-            {["Figma","Adobe XD","Photoshop","Illustrator","HTML5","CSS3","JavaScript","React.js","Tailwind CSS","Next.js","Supabase","Git & GitHub","VS Code"].map(t=>(
-              <span key={t} className="rounded-full border border-[#C9A86A]/10 bg-[#081410] px-3.5 py-1.5 text-zinc-300">{t}</span>
+          <div className="text-center text-[13px] tracking-[0.18em] text-[#C9A86A]">SOFTWARE • AI • TOOLS — DOCUMENTED STACK</div>
+          <div className="mt-4 flex flex-wrap justify-center gap-2 text-[13px]">
+            {["Java/J2EE","Struts 1.35","DQE","SOADA","Eclipse","QTP 9.2","QC","Toad","Wily Introscope","WebSphere 6.1","WebLogic 8.1","SQL Server","Oracle 9i","DB2"].map(t=>(
+              <span key={t} className="rounded-full border border-[#C9A86A]/10 bg-[#081410] px-3 py-1 text-zinc-400">{t}</span>
             ))}
           </div>
+          <div className="mt-3 flex flex-wrap justify-center gap-2 text-[13px]">
+            {["Next.js","Tailwind CSS","Supabase","Vercel","Figma","VS Code","OpenCode","Minimax M2.5","DeepSeek V4 Flash","Hy3","Ling 2.6 Flash","Big Pickle","AmiBroker 5.70","Selenium","Screener.in","TradingView"].map(t=>(
+              <span key={t} className="rounded-full border border-[#C9A86A]/15 bg-[#C9A86A]/5 px-3 py-1 text-[#E8D5B5]">{t}</span>
+            ))}
+          </div>
+          <p className="mt-3 text-center text-[12px] text-zinc-500">8 years enterprise + freelance AI • Full list on About →</p>
         </div>
       </section>
 
@@ -90,10 +96,10 @@ export default function Home() {
         <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
           <div className="rounded-2xl border border-[#C9A86A]/12 bg-[#10201A]/60 p-6 sm:p-8 relative overflow-hidden">
             <div className="absolute -top-6 -right-6 text-[120px] font-display font-bold text-white/[0.03] leading-none">01</div>
-            <div className="text-[13px] tracking-[0.18em] text-[#C9A86A]">ABOUT ME</div>
-            <h3 className="mt-2 font-display text-[22px] sm:text-[26px] font-medium text-white leading-tight">Passionate about design,<br /><span className="text-[#C9A86A]">driven by purpose.</span></h3>
-            <p className="mt-4 text-[16px] leading-7 text-zinc-300">
-              I&apos;m a freelance technology & AI creative — former software engineer at Atos Syntel → LTM Limited → TCS. Now building through LeyBros Private Ltd.: vibe coding, websites, SEO, and AI-enabled creative — product, architecture, ads, UGC. Private investor separately; stock-market sharing is education-only.
+            <div className="text-[13px] tracking-[0.18em] text-[#C9A86A]">ABOUT — LESLIE PRABAKAR</div>
+            <h3 className="mt-2 font-display text-[22px] sm:text-[26px] font-medium text-white leading-tight">B.Tech IT — First Class with Distinction.<br /><span className="text-[#C9A86A]">Silver Medal • IFET / Anna University</span></h3>
+            <p className="mt-4 text-[15px] leading-7 text-zinc-300">
+              8 years as Project Lead / Developer cum Tester (Java/J2EE, Struts) at Syntel (John Hancock), L&T Infotech (Standard Life, Marsh), TCS (Citi, Qantas). Freelance alt-text specialist for LAPIZ / Harvard (Section 508). Now freelance AI Engineer — vibe coding with VS Code/OpenCode, Minimax M2.5, DeepSeek V4 Flash & more. Private investor decade+ — Stepper.
             </p>
             <div className="mt-5 grid grid-cols-3 gap-3 text-[14px]">
               <div className="rounded-xl bg-[#081410] border border-[#C9A86A]/10 p-3"><div className="text-[#C9A86A] font-medium">✓ Pixel-Perfect</div><div className="text-zinc-500 mt-1 text-[13px]">Clean, modern and user-focused</div></div>
@@ -104,13 +110,14 @@ export default function Home() {
           </div>
           <div className="rounded-2xl border border-[#C9A86A]/12 bg-gradient-to-b from-[#10201A] to-[#0d1a14] p-6 sm:p-8 relative overflow-hidden">
             <div className="absolute -top-6 -right-6 text-[120px] font-display font-bold text-white/[0.03] leading-none">02</div>
-            <div className="text-[13px] tracking-[0.18em] text-[#C9A86A]">TIMELINE — NO INVENTED DATES</div>
+            <div className="text-[13px] tracking-[0.18em] text-[#C9A86A]">TIMELINE — DOCUMENTED</div>
             <div className="mt-6 space-y-5">
               {[
-                ["Atos Syntel", "Enterprise foundation"],
-                ["LTM Limited", "LTM Limited — not LTIMindtree"],
-                ["Tata Consultancy Services (TCS)", "Large-scale delivery"],
-                ["LeyBros Private Ltd. — Freelancer", "Build → Create → Observe"],
+                ["Syntel Ltd. — John Hancock (Canada)", "QTP 9.2 & QC • Ezk & PSW apps"],
+                ["L&T Infotech Ltd. — Standard Life & Marsh", "Enterprise delivery (not LTIMindtree)"],
+                ["TCS — Citi (USA) & Qantas (Australia)", "Java/J2EE, Struts • Large-scale"],
+                ["LAPIZ — Harvard University", "Alt-Text • Section 508 accessibility"],
+                ["Freelance AI Engineer + Private Investor", "VibeCode • Stepper (automated)"],
               ].map(([org, note])=>(
                 <div key={org} className="flex gap-3">
                   <div className="h-2 w-2 mt-2.5 rounded-full bg-[#C9A86A] shrink-0" />
@@ -176,9 +183,9 @@ export default function Home() {
             <span className="rounded-full border border-[#C9A86A]/10 px-3.5 py-1.5 text-[13px] text-zinc-300">Education only</span>
             <span className="rounded-full border border-[#C9A86A]/10 px-3.5 py-1.5 text-[13px] text-zinc-300">Not SEBI-registered</span>
           </div>
-          <h2 className="mt-4 font-display text-[28px] sm:text-[32px] font-medium text-white">Stock-market knowledge sharing — practical notes, not calls.</h2>
+          <h2 className="mt-4 font-display text-[28px] sm:text-[32px] font-medium text-white">Stock-market knowledge sharing — Stepper, not calls.</h2>
           <p className="mt-2 max-w-3xl text-[16px] leading-7 text-zinc-300">
-            For learners interested in micro/small-cap observation, price action, volume/delivery, moving averages, breakouts. Screenshots are evidence; explanation stays crisp.
+            Decade+ private investor (equities & derivatives) — proprietary Stepper, automated fundamentals & technicals. EOD Bhavcopy downloader, series-wise & band-shift filters, watchlist generation (AmiBroker AFL, Eclipse Java, Selenium, Screener.in, ChartInk, TradingView). Screenshots are evidence; education only.
           </p>
           <div className="mt-6 grid gap-4 sm:grid-cols-3">
             {observations.map(o=> <ObservationCard key={o.slug} o={o} />)}
