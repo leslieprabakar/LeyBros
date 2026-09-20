@@ -1,0 +1,53 @@
+export const site = {
+  name: "LeyBros Private Ltd.",
+  shortName: "LeyBros",
+  tagline: "BUILD • CREATE • OBSERVE",
+  url: "https://leybros.com",
+  description:
+    "Freelance technology & AI creative practice built on enterprise software engineering. Websites, vibe coding, SEO, AI art/video/3D, advertising. Separate stock-market knowledge sharing.",
+  author: "LeyBros Private Ltd.",
+  email: "hello@leybros.com",
+  nav: [
+    { label: "Build", href: "/build" },
+    { label: "Create", href: "/create" },
+    { label: "Observe", href: "/observe" },
+    { label: "About", href: "/about" },
+    { label: "Contact", href: "/contact" },
+  ],
+  concept: {
+    build: {
+      title: "BUILD",
+      desc: "Software engineering foundation → vibe coding, websites, web apps, SEO. Performance, structure, search-ready.",
+      color: "#0ea5e9",
+    },
+    create: {
+      title: "CREATE",
+      desc: "AI image enhancement, generation, video, 3D visualization, product & architectural renders, advertising creatives.",
+      color: "#a855f7",
+    },
+    observe: {
+      title: "OBSERVE",
+      desc: "Private investing lens — micro/small-cap market observation, price action, knowledge sharing. Not a service.",
+      color: "#f59e0b",
+    },
+  },
+  timeline: [
+    { org: "Atos Syntel", note: "Enterprise software engineering foundation" },
+    { org: "LTM Limited", note: "Enterprise systems & delivery experience" },
+    { org: "Tata Consultancy Services", note: "TCS — large-scale software practice" },
+    { org: "LeyBros Private Ltd.", note: "Freelancer → Vibe coding → AI creative → Private investor" },
+  ],
+  seo: {
+    keywords: [
+      "LeyBros",
+      "vibe coding",
+      "website development",
+      "SEO",
+      "AI art",
+      "AI video",
+      "3D visualization",
+      "product visualization",
+      "UGC ads",
+    ],
+  },
+} as const;

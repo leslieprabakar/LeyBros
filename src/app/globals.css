@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0a0a0b;
+  --foreground: #fafaf9;
+  --muted: #a1a1aa;
+  --border: rgba(255,255,255,0.08);
+  --border-strong: rgba(255,255,255,0.14);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-display: var(--font-display);
+}
+
+* { scrollbar-width: thin; scrollbar-color: #27272a transparent; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Focus */
+:focus-visible { outline: 2px solid #e4e4e7; outline-offset: 2px; }
+
+/* Selection */
+::selection { background: #a855f7; color: white; }
+
+/* Gradients */
+.glass {
+  background: rgba(255,255,255,0.04);
+  backdrop-filter: blur(16px);
+  border: 1px solid var(--border);
+}
+
+/* Animations */
+@media (prefers-reduced-motion: no-preference) {
+  .reveal { animation: reveal 0.8s ease-out forwards; opacity:0; transform: translateY(16px); }
+  @keyframes reveal { to { opacity:1; transform: translateY(0); } }
+}
+
+/* Hide scrollbar for carousels */
+.no-scrollbar::-webkit-scrollbar { display:none; }
+.no-scrollbar { -ms-overflow-style:none; scrollbar-width:none; }
