@@ -1,4 +1,4 @@
-# LeyBros Private Ltd. — Web • AI • Market Insight
+# LeyBros Private Ltd., — Web • AI • Market Insight
 
 Freelance technology & AI creative practice on an enterprise engineering foundation.
 

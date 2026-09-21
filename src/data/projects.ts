@@ -1,17 +1,22 @@
-export type ProjectCategory = "build" | "create";
-export type BuildType = "website" | "webapp" | "seo";
+export type ProjectCategory = "build" | "create" | "automate" | "research";
+export type BuildType = "website" | "webapp" | "seo" | "hub";
 export type CreateType = "image" | "enhancement" | "product" | "architecture" | "cinematic" | "advertising" | "video" | "3d";
+export type AutomateType = "desktop-rpa" | "web-rpa";
+export type ResearchType = "backtesting" | "screening";
 
 export type Project = {
   slug: string;
   title: string;
   category: ProjectCategory;
-  sub: BuildType | CreateType;
+  sub: BuildType | CreateType | AutomateType | ResearchType;
   excerpt: string;
   cover: string; // placeholder / real path
   tags: string[];
   status: "published" | "placeholder";
   href?: string;
+  delivery?: "website" | "desktop" | "automation" | "research";
+  responsive?: "yes" | "no" | "n/a";
+  seoGrade?: string;
   meta: {
     objective?: string;
     role?: string;
@@ -28,58 +33,176 @@ export type Project = {
 };
 
 export const projects: Project[] = [
-  // BUILD — placeholders
+  // ── AUDITED — WEBSITE (build) ──
   {
-    slug: "ecommerce-herby-inspired",
-    title: "E-Commerce Build — Herby-inspired Standard",
+    slug: "feather-creations-website",
+    title: "Feather Creations — Premium Fabrics & Fashion Website",
     category: "build",
     sub: "website",
-    excerpt: "Reference-standard e-commerce: mega nav, filters, Razorpay, Supabase. Full spec preserved for client reuse.",
-    cover: "/portfolio/placeholders/build-1.jpg",
-    tags: ["Next.js", "Supabase", "Razorpay", "SEO"],
-    status: "placeholder",
+    excerpt: "Vanilla HTML/CSS/JS + Express 5.1 with Resend & sharp. 60+ pages, responsive, OG + JSON-LD, live on Vercel — catalog that converts bulk orders.",
+    cover: "https://Feather-Creations.vercel.app/webp/fam-wide.webp?v=1",
+    tags: ["HTML/CSS/JS", "Express 5.1", "Resend 4.0", "Vercel"],
+    status: "published",
+    delivery: "website",
+    responsive: "yes",
+    seoGrade: "★★★★",
+    href: "/web",
     meta: {
-      objective: "Replicate & improve herby.in with scalable stack",
-      role: "Full-stack + SEO",
-      approach: "Node/Next + Supabase, component architecture",
-      technology: ["Next.js", "Tailwind", "Supabase", "Razorpay"],
-      features: ["Mega nav", "Multi-filter", "Cart drawer", "Reviews"],
-      seo: ["Schema.org Product", "Sitemap", "OG", "Core Web Vitals"],
-      result: "Awaiting live deployment — spec ready",
+      objective: "Catalog website for Pondicherry bulk fabrics — men's/women's/kids, T-shirts, caps, bags, school uniforms, embroidery",
+      role: "Full-stack (vanilla frontend + Express contact API)",
+      approach: "Hand-written HTML/CSS + Express static + Vercel @vercel/node+static; security headers + 1y cache",
+      technology: ["HTML5", "CSS3", "JavaScript", "Express 5.1.0", "Resend 4.0.0", "sharp 0.35.3", "Vercel", "Poppin/Playfair Display"],
+      features: ["22-URL navigation", "Multer 5MB image enquiry", "Security headers (nosniff/SAMEORIGIN/XSS)", "Static cache 1y immutable", "Animated grids + video showcases"],
+      seo: ["OG + Twitter cards", "3× JSON-LD (Organization/LocalBusiness/Breadcrumb)", "sitemap.xml 22 URLs", "robots.txt", "canonical", "Google verify token"],
+      result: "Live — responsive (768/480 media queries, hamburger, touch handling) • Evidence: index.html:6-102, server.js:1-104, vercel.json:1-62",
+      liveUrl: "https://Feather-Creations.vercel.app",
     },
   },
   {
-    slug: "moowhub-wellness-platform",
-    title: "Moow.Hub — Wellness & Yoga Platform",
+    slug: "moow-hub-ecommerce",
+    title: "Moow.Hub — Wellness & Yoga E-Commerce Platform",
     category: "build",
     sub: "webapp",
-    excerpt: "Static marketing → full e-commerce vision. Digital ecosystem & bundle flows.",
-    cover: "/portfolio/placeholders/build-2.jpg",
-    tags: ["Vibe coding", "E-commerce", "Wellness"],
-    status: "placeholder",
+    excerpt: "Vercel Serverless + Supabase + Stripe/Razorpay dual gateway. Auth, cart, orders, wishlist, COD OTP — lean commerce that ships.",
+    cover: "https://Moow-Hub.vercel.app/images/digital-ecosystem.webp",
+    tags: ["Vercel Serverless", "Supabase 2.45", "Stripe+Razorpay", "E-Commerce"],
+    status: "published",
+    delivery: "website",
+    responsive: "yes",
+    seoGrade: "★★★",
+    href: "/web",
     meta: {
-      objective: "Transform wellness site into transactional platform",
-      role: "Vibe coding, architecture",
-      technology: ["Next.js", "Vercel", "Supabase"],
-      features: ["Bundles", "Corporate wellness", "Performance tuned"],
-      result: "Prototype & audit completed — awaiting assets",
+      objective: "Wellness/yoga lifestyle e-commerce — pose library, wellness AI, centers, products, partners",
+      role: "Serverless API + static frontend (http shim for local dev)",
+      approach: "Single serverless function api/index.js + public/ static with clean URL rewrites; Supabase Postgres+Auth+RLS",
+      technology: ["Vercel Serverless", "Supabase 2.45", "Stripe 14.x", "Razorpay 2.8", "Resend 3.0", "JWT 9.0", "PDFKit 0.15", "sharp 0.35", "Node ≥18"],
+      features: ["Cart + wishlist", "Stripe (global) / Razorpay (INR) routing", "COD OTP flow", "Free shipping ≥$100 logic", "Shipped tracking + 24h cancel", "Email log + PDF invoices"],
+      seo: ["sitemap.xml 15 URLs", "robots.txt (disallow admin/cart)", "clean URLs /about→/pages/about.html", "CSP/HSTS headers"],
+      result: "Production — 1.6k-line API handles auth/products/orders; Evidence: api/index.js, server.js:1-143, vercel.json:1-42",
+      liveUrl: "https://Moow-Hub.vercel.app",
     },
   },
   {
-    slug: "seo-technical-foundation",
-    title: "SEO — Technical Foundation & Structure",
+    slug: "leybros-flagship-hub",
+    title: "LeyBros — Flagship Portfolio Hub (This Site)",
     category: "build",
-    sub: "seo",
-    excerpt: "Semantic HTML, metadata, sitemap, performance. The site itself is the case study.",
-    cover: "/portfolio/placeholders/build-3.jpg",
-    tags: ["Technical SEO", "Performance", "Structure"],
-    status: "placeholder",
+    sub: "hub",
+    excerpt: "Next.js 16.3.5 App Router + Tailwind 4 + TypeScript. Programmatic sitemap/robots, triptych Web/AI/Market, hub for all 7 projects.",
+    cover: "/brand/logo.png",
+    tags: ["Next.js 16", "Tailwind 4", "TypeScript 5", "Vercel"],
+    status: "published",
+    delivery: "website",
+    responsive: "yes",
+    seoGrade: "★★★★",
+    href: "/",
     meta: {
-      seo: ["Heading hierarchy", "Canonical", "Structured data", "Alt text", "Robots.txt"],
-      result: "Lighthouse-ready baseline",
+      objective: "Hub that lists all lanes — Web • AI • Market Insight — with SEO + contact pipeline",
+      role: "Frontend + SEO + Vercel deploy",
+      approach: "Next.js App Router, Tailwind 4, Resend contact API, avif/webp, redirects /build→/web etc.",
+      technology: ["Next.js 16.3.5", "React 19.2.8", "Tailwind 4", "TypeScript 5", "Resend 6.28", "Vercel"],
+      features: ["Hero + Triptych + StatCounter + Pricing", "Programmatic sitemap.ts + robots.ts", "ProjectCard / ObservationCard", "SectionHeader + Marquee"],
+      seo: ["Programmatic sitemap/robots", "avif/webp images", "OG via metadata API", "redirects permanent"],
+      result: "Live on localhost:3000 — evidence: src/app/page.tsx:1-210, next.config.ts:1-20, Detailed.docx filtered",
+      liveUrl: "https://LeyBros.vercel.app",
     },
   },
-  // CREATE — placeholders
+  // ── AUDITED — AI & AUTOMATION ──
+  {
+    slug: "grid-alttextgen-accessibility-ai",
+    title: "ALT-Text Generator (Harvard University) — Section 508 Alt-Text Factory (Desktop AI)",
+    category: "create",
+    sub: "enhancement",
+    excerpt: "Python CLI: PNG → numbered 9-image grids → OpenAI/Anthropic/Gemini failover → validated alt text → Excel. Batch 1000s of books offline.",
+    cover: "/portfolio/placeholders/create-5.jpg",
+    tags: ["Python 3.11", "Pillow/PyMuPDF", "OpenAI/Anthropic/Gemini", "Excel"],
+    status: "published",
+    delivery: "desktop",
+    responsive: "n/a",
+    seoGrade: "N/A (offline)",
+    href: "/ai",
+    meta: {
+      objective: "Generate humanized Section 508 alt text for PNG images in single or 200+ book folders",
+      role: "CLI pipeline + validation + Excel writer",
+      approach: "Pillow grid tiling (640×480 3×3, --grid-size/--grid-quality), ThreadPoolExecutor MAX_WORKERS=8, provider failover, 10-370 char validation",
+      technology: ["Python 3.11+", "Pillow ≥10", "PyMuPDF ≥1.24", "openpyxl ≥3.1", "openai ≥1.0", "anthropic ≥0.40", "google-genai ≥1.0", "python-dotenv"],
+      features: ["6/9-image grid batching", "PDF mode (embedded images)", "Multi-folder parent-path mirror", "failed.csv + alt_texts.xlsx per book"],
+      seo: ["Accessibility-grade alt validation (bans hallucinations)"],
+      result: "Beta CLI — evidence: src/cli.py:36-475, src/config.py:27-50, README.md:1-221",
+      workflow: "Folders → validation → GRID tiling → LLM call → validation → Excel",
+      aspect: "3×3 grid (configurable)",
+    },
+  },
+  {
+    slug: "nest-trader-excel-bridge",
+    title: "NEST Trading Terminal Automation — ListView → Excel Bridge (Desktop RPA)",
+    category: "automate",
+    sub: "desktop-rpa",
+    excerpt: "Pure Win32 memory scrape: VirtualAllocEx + SendMessageW LVM_GETITEMTEXTW + ReadProcessMemory. NEST has no API — now it has Excel.",
+    cover: "/portfolio/placeholders/create-1.jpg",
+    tags: ["Python + Win32", "ctypes", "openpyxl", "RPA"],
+    status: "published",
+    delivery: "automation",
+    responsive: "n/a",
+    seoGrade: "N/A",
+    href: "/ai",
+    meta: {
+      objective: "Dump NEST Trading Terminal ‘FromScreenerRAW20’ SysListView32 table to FromScreenerRAW20_YYYY-MM-DD.xlsx",
+      role: "Reverse-engineered Win32 RPA",
+      approach: "EnumWindows → MDIClient → AfxFrameOrView140 → largest SysListView32 by area; OpenProcess + remote LVITEM/HDITEM via struct.pack 96B",
+      technology: ["Python", "win32gui/win32process", "ctypes/kernel32", "openpyxl", "PowerShell batch"],
+      features: ["Cross-process ListView read", "Header + cell extraction", "Progress every 100 rows", "Auto timestamped Excel"],
+      result: "Working — evidence: export_excel.py:1-172, probe_*.py 20 probes, launcher.py + PowerShell",
+      workflow: "NEST open → locate ListView → remote alloc → SendMessageW per cell → Excel",
+    },
+  },
+  {
+    slug: "iipa-auditor-automation",
+    title: "II*A Private Sector Office Work Automation — Auditor Table Auto-Fill (Web RPA)",
+    category: "automate",
+    sub: "web-rpa",
+    excerpt: "Selenium automation: URL → manual login → filter rows (x.y.z) → pa_value from col3 → 3-tier dropdown in col7 → ‘ok’ in col9. Half-day → minutes.",
+    cover: "/portfolio/placeholders/create-4.jpg",
+    tags: ["Python", "Selenium", "webdriver-manager", "RPA"],
+    status: "published",
+    delivery: "automation",
+    responsive: "n/a",
+    seoGrade: "N/A (internal)",
+    href: "/ai",
+    meta: {
+      objective: "Automate auditor table: mirror col4 PA value into col8 select + col10 remarks",
+      role: "Selenium RPA (manual login gate, auto fill)",
+      approach: "Chrome detach maximized, 3-tier dropdown: Select → option click → custom div[role=button] fallback; regex row filter",
+      technology: ["Python", "selenium", "webdriver-manager", "Chrome Options(detach)"],
+      features: ["Manual login gate (ENTER)", "3 fallback selectors", "Regex ^\\d+\\.\\d+\\.\\d+$ filter", "0.3s throttle, browser stays open"],
+      result: "Script — evidence: auditor_automation.py:1-109 (109 lines), debug_structure.py",
+      workflow: "Prompt URL → Chrome → login → table tbody tr → select → remarks ok",
+    },
+  },
+  {
+    slug: "fno-rnd-quant-platform",
+    title: "AmiBroker Desktop App Automation — Quantitative Backtesting & Screening Platform",
+    category: "research",
+    sub: "backtesting",
+    excerpt: "Python 3.12 + pandas + NSE Bhavcopy + AFL. F&O 300%/5% screener, Harmonic Fractal XABC, HRoC 570 — research that becomes knowledge, not tips.",
+    cover: "/portfolio/placeholders/create-6.jpg",
+    tags: ["Python 3.12", "pandas", "Bhavcopy", "AFL", "Quant"],
+    status: "published",
+    delivery: "research",
+    responsive: "n/a",
+    seoGrade: "Via Market Insight",
+    href: "/market-insight",
+    meta: {
+      objective: "Backtest & screen NSE micro/small-cap ideas — momentum + fractal + crash filters",
+      role: "Quant research workbench (AFL + Python hybrid)",
+      approach: "Join F&O bhav (fo*.zip) option high≥300% + spot ≥5% + 20/60/252 breakout; 6-loop XABC fractal; HRoC/Q60/M40 AFL explores",
+      technology: ["Python 3.12", "pandas", "NSE Bhavcopy", "AmiBroker AFL", "ruff+pyright"],
+      features: ["fno_300pct_spot5pct_2024plus.csv", "harmonic_fractal_XABC_YTD2026.csv", "Crash_Q60_M40 AFL", "HRoC 570", "Excel + CSV tear-sheets"],
+      result: "Research — evidence: screener_300_5.py:1-182, harmonic_fractal.py:1-108, AGENTS.md:1-6, *.afl",
+      workflow: "Bhav ingest → join → breakout → walk-forward → Excel/PDF tear-sheet",
+      aspect: "Batch CSV/Excel + AFL explores",
+    },
+  },
+  // ── REMAINING AI VISUAL PLACEHOLDERS (keep 6 to show upcoming lane) ──
   {
     slug: "product-visualization-exploded",
     title: "Product Visualization — Exploded View",
@@ -96,7 +219,7 @@ export const projects: Project[] = [
     title: "Architectural Visualization — Cinematic Still",
     category: "create",
     sub: "architecture",
-    excerpt: "Natural light, correct perspective, material accuracy — built for developers.",
+    excerpt: "Natural light, correct perspective, material accuracy — built for developers. Upcoming lane.",
     cover: "/portfolio/placeholders/create-2.jpg",
     tags: ["ArchViz", "Photoreal", "AI"],
     status: "placeholder",
@@ -150,3 +273,7 @@ export const projects: Project[] = [
 
 export const buildProjects = projects.filter((p) => p.category === "build");
 export const createProjects = projects.filter((p) => p.category === "create");
+export const automateProjects = projects.filter((p) => p.category === "automate");
+export const researchProjects = projects.filter((p) => p.category === "research");
+export const publishedProjects = projects.filter((p) => p.status === "published");
+export const placeholderProjects = projects.filter((p) => p.status === "placeholder");

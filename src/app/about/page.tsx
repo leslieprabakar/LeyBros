@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { SectionHeader } from "@/components/ui/SectionHeader";
+import { ComparisonMatrix } from "@/components/ui/ComparisonMatrix";
 import { site } from "@/data/site";
 
 export const metadata = { title: "About — Evolution", description: "Former software engineer → freelancer → AI creative → private investor. The LeyBros story." };
@@ -10,7 +11,7 @@ export default function AboutPage() {
       <SectionHeader kicker="ABOUT — PROFESSIONAL STORY" title="Built on enterprise engineering. Practicing as a freelancer." desc="No invented titles, dates, or achievements. The journey is the credential." />
       <div className="mt-8 grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
         <div className="rounded-[16px] border border-[#C9A86A]/12 bg-[#10201A]/60 p-6 sm:p-8">
-          <h3 className="font-display text-lg font-medium text-white">LeyBros Private Ltd. — freelance technology & AI creative practice.</h3>
+          <h3 className="font-display text-lg font-medium text-white">LeyBros Private Ltd., — freelance technology & AI creative practice.</h3>
           <p className="mt-3 text-sm leading-7 text-zinc-400">
             I began as a software engineer in enterprise environments. That foundation — systems thinking, quality, delivery — now powers freelance work across vibe coding, website development, SEO, AI-assisted imagery, AI video/3D, and advertising creatives. Separately, I invest privately with a focus on micro/small caps and share observations educationally.
           </p>
@@ -38,6 +39,16 @@ export default function AboutPage() {
             <span className="text-amber-200">Note:</span> LTM Limited is the current name — not LTIMindtree. No invented dates/roles.
           </div>
           <Link href="/contact" className="mt-4 inline-flex rounded-full bg-[#C9A86A] px-6 py-2.5 text-xs font-semibold text-[#081410] hover:bg-[#D4B78A]">Work with me →</Link>
+        </div>
+      </div>
+
+      <div className="mt-10">
+        <SectionHeader kicker="AUDITED — FILTERED FROM DETAILED.DOCX" title="What I built vs. what it really is" desc="Lens B Atlas (§2) — 7 projects, 3 delivery models, one founder. Lens C metrics above feed Stats & Skills on homepage. No placeholders — evidence is file:line." />
+        <div className="mt-6">
+          <ComparisonMatrix />
+        </div>
+        <div className="mt-4 rounded-xl border border-[#C9A86A]/12 bg-[#10201A]/40 p-4 text-[12px] leading-5 text-zinc-400">
+          <span className="font-semibold text-white">Why this wins trust:</span> Visitors see in 10 seconds that you’ve shipped responsive websites (★★★★ SEO), desktop AI that batches 9 images per LLM call, Win32 RPA that scrapes where there’s no API, and a quant platform with Bhavcopy + AFL — all filtered from live code, not marketing copy. That’s why they give you the project.
         </div>
       </div>
     </div>

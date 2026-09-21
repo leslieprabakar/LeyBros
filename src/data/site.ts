@@ -1,12 +1,12 @@
 export const site = {
-  name: "LeyBros Private Ltd.",
+  name: "LeyBros Private Ltd.,",
   shortName: "LeyBros",
   tagline: "Web • AI • Market Insight",
-  url: "https://leybros.com",
+  url: "https://LeyBros.vercel.app",
   description:
     "Freelance technology & AI creative practice built on enterprise software engineering. Websites, vibe coding, SEO, AI art/video/3D, advertising. Separate stock-market knowledge sharing.",
-  author: "LeyBros Private Ltd.",
-  email: "hello@leybros.com",
+  author: "LeyBros Private Ltd.,",
+  email: "LesliePrabakar@GMail.com",
   nav: [
     { label: "Web", href: "/web" },
     { label: "AI", href: "/ai" },
@@ -35,7 +35,7 @@ export const site = {
     { org: "Atos Syntel", note: "Enterprise software engineering foundation" },
     { org: "LTM Limited", note: "Enterprise systems & delivery experience" },
     { org: "Tata Consultancy Services", note: "TCS — large-scale software practice" },
-    { org: "LeyBros Private Ltd.", note: "Freelancer → Vibe coding → AI creative → Private investor" },
+    { org: "LeyBros Private Ltd.,", note: "Freelancer → Vibe coding → AI creative → Private investor" },
   ],
   seo: {
     keywords: [

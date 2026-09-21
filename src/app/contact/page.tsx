@@ -14,14 +14,16 @@ export default async function ContactPage({ searchParams }: { searchParams?: Pro
             <label htmlFor="category" className="text-xs tracking-[0.12em] text-zinc-400">CATEGORY *</label>
             <select id="category" name="category" defaultValue={intent==="market-insight" ? "stock-knowledge" : ""} className="rounded-xl border border-[#C9A86A]/15 bg-[#081410] px-3 py-3 text-sm text-white" required>
               <option value="" disabled>Select one</option>
-              <option value="website">Website Development — ₹4,999 onwards</option>
+              <option value="website">Website Development — ₹4,999 onwards (Feather/Moow.Hub/LeyBros)</option>
               <option value="seo">SEO — ₹1,999/mo</option>
-              <option value="ai-image">AI Image / Enhancement — ₹5,999/20 images</option>
+              <option value="ai-image">AI Image / Enhancement — ₹5,999/20 images (ALT-Text Generator (Harvard University))</option>
               <option value="ai-video">AI Video & 3D — ₹14,999/campaign</option>
               <option value="3d">3D Visualization</option>
               <option value="ads">Advertising / UGC</option>
+              <option value="automation-desktop">Desktop Automation — NEST Trading Terminal Automation (Win32) / II*A Private Sector Office Work Automation</option>
+              <option value="quant-research">Quant Research — AmiBroker Desktop App Automation</option>
               <option value="other">Other Freelance Requirement</option>
-              <option value="stock-knowledge">Stock-Market Knowledge Program</option>
+              <option value="stock-knowledge">Stock-Market Knowledge Program (Market Insight)</option>
             </select>
           </div>
           <div className="grid gap-4 sm:grid-cols-2">
@@ -47,7 +49,7 @@ export default async function ContactPage({ searchParams }: { searchParams?: Pro
             <p className="mt-2">Stock-market mentorship is <span className="text-zinc-200">not</span> bundled with freelance services. No buy/sell calls. If you’re here for a website, choose a WEB/AI category.</p>
           </div>
           <div className="rounded-[16px] border border-[#C9A86A]/12 bg-[#081410] p-4 text-[11px] leading-5 text-zinc-500">
-            Email direct: <a href="mailto:hello@leybros.com" className="text-[#E8D5B5] hover:underline">hello@leybros.com</a> • Websites ₹4,999–18,999 • AI ₹5,999–14,999
+            Email direct: <a href="mailto:LesliePrabakar@GMail.com" className="text-[#E8D5B5] hover:underline">LesliePrabakar@GMail.com</a> • Websites ₹4,999–18,999 • AI ₹5,999–14,999
           </div>
         </div>
       </div>

@@ -1,4 +1,4 @@
-export function CircularBadge({ text = "DESIGNING PURPOSE • BUILDING LEGACY •" }: { text?: string }) {
+export function CircularBadge({ text = "ENGINEERING TRUST • CRAFTING VISIBILITY •" }: { text?: string }) {
   return (
     <div className="relative h-20 w-20 shrink-0">
       <svg viewBox="0 0 100 100" className="h-full w-full animate-spin-slow">

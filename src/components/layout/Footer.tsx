@@ -51,17 +51,16 @@ export function Footer() {
           </div>
           <div className="flex gap-4 text-[13px]">
             <div className="space-y-1 text-zinc-400">
-              <div className="flex gap-2"><span className="text-[#C9A86A]">✉</span> hello@leybros.com</div>
-              <div className="flex gap-2"><span className="text-[#C9A86A]">◎</span> ley bros.com</div>
-              <div className="flex gap-2"><span className="text-[#C9A86A]">◈</span> India • Remote worldwide</div>
+              <div className="flex gap-2"><span className="text-[#C9A86A]">✉</span> LesliePrabakar@GMail.com</div>
+              <div className="flex gap-2"><span className="text-[#C9A86A]">◎</span> https://LeyBros.vercel.app</div>
             </div>
             <Link href="/contact" className="hidden sm:inline-flex h-fit rounded-full bg-[#C9A86A] px-7 py-3 text-[14px] font-semibold text-[#081410] hover:bg-[#D4B78A]">BOOK A CALL →</Link>
           </div>
         </div>
       </div>
       <div className="mx-auto max-w-[1280px] px-4 sm:px-6 py-6 border-t border-[#C9A86A]/10 flex flex-col sm:flex-row gap-2 justify-between text-[13px] text-zinc-400">
-        <span>© {new Date().getFullYear()} LeyBros Private Ltd. All rights reserved.</span>
-        <span className="tracking-wide">DESIGNING PURPOSE • BUILDING LEGACY • Built with Code + AI</span>
+        <span>© {new Date().getFullYear()} LeyBros Private Ltd., All rights reserved.</span>
+        <span className="tracking-wide">ENGINEERING TRUST • CRAFTING VISIBILITY • Built with Code + AI</span>
       </div>
     </footer>
   );

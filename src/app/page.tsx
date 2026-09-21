@@ -16,17 +16,18 @@ export default function Home() {
       <Hero />
       <Triptych />
 
-      {/* Stats */}
+      {/* Stats — filtered from Detailed.docx Lens C: Metric | Count/Status + Lens B Atlas */}
       <section className="mx-auto max-w-[1280px] px-4 sm:px-6 py-8">
         <StatCounter items={[
-          { value: "10+", label: "YEARS ENGINEERING", sub: "Atos • LTM • TCS foundation" },
-          { value: "40+", label: "PROJECTS DELIVERED", sub: "Websites, apps, creatives" },
-          { value: "25+", label: "HAPPY CLIENTS", sub: "Startups to enterprises" },
-          { value: "100%", label: "DEDICATION", sub: "One practice, distinct lanes" },
+          { value: "7", label: "PROJECTS AUDITED", sub: "4 public-facing + 3 private/automation" },
+          { value: "3", label: "RESPONSIVE WEBSITES", sub: "Feather • Moow.Hub • LeyBros ✓" },
+          { value: "3", label: "LLM PROVIDERS", sub: "OpenAI • Anthropic • Gemini failover" },
+          { value: "2", label: "PAYMENT GATEWAYS", sub: "Stripe + Razorpay (dual)" },
         ]} />
+        <p className="mt-3 text-center text-[11px] tracking-wide text-zinc-500">Filtered from <span className="text-[#C9A86A]">Detailed.docx</span> Lens C — Metric | Count/Status • Evidence: live repo inspection 21 Sep 2026 • 7 builds, 3 delivery models, one founder</p>
       </section>
 
-      <Marquee items={["ATOS SYNTEL","LTM LIMITED","TCS","NEXT.JS","SUPABASE","TAILWIND","VERCEL","FIGMA","AI CREATIVES"]} />
+      <Marquee items={["ATOS SYNTEL","LTM LIMITED","TCS","NEXT.JS 16","REACT 19","TAILWIND 4","SUPABASE","VERCEL","PYTHON 3.12","PANDAS","AFL","WIN32 API","SELENIUM"]} />
 
       {/* Services — What I can help you with */}
       <section id="services" className="mx-auto max-w-[1280px] px-4 sm:px-6 py-12">
@@ -54,34 +55,42 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Selected Work */}
+      {/* Selected Work — now filtered from Detailed.docx: 7 real projects show as published */}
       <section className="mx-auto max-w-[1280px] px-4 sm:px-6 py-8">
         <div className="flex items-end justify-between gap-4">
           <div>
-            <div className="inline-flex items-center gap-2 text-[13px] tracking-[0.18em] text-[#C9A86A]"><span>✦</span> SELECTED WORK</div>
-            <h2 className="mt-2 font-display text-[30px] sm:text-[34px] font-medium text-white">A selection of my recent work</h2>
+            <div className="inline-flex items-center gap-2 text-[13px] tracking-[0.18em] text-[#C9A86A]"><span>✦</span> SELECTED WORK — FILTERED FROM DETAILED.DOCX</div>
+            <h2 className="mt-2 font-display text-[30px] sm:text-[34px] font-medium text-white">A selection of my recent work — 7 real projects</h2>
+            <p className="mt-1 text-[13px] text-zinc-400">Lens B Atlas: What you built vs. what it really is • Lens A tech now lives inside each card • Lens C metrics above</p>
           </div>
           <Link href="/ai" className="hidden sm:inline-flex text-[14px] tracking-wide text-[#C9A86A] hover:text-[#E8D5B5]">EXPLORE ALL PROJECTS →</Link>
         </div>
         <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {projects.slice(0,6).map(p=> <ProjectCard key={p.slug} p={p} />)}
+          {projects.filter(p=>p.status==="published").slice(0,6).map(p=> <ProjectCard key={p.slug} p={p} />)}
         </div>
         <div className="mt-4 flex flex-wrap gap-2">
-          <Link href="/web" className="rounded-full bg-[#C9A86A] px-6 py-2.5 text-[14px] font-semibold text-[#081410] hover:bg-[#D4B78A]">View WEB case studies</Link>
-          <Link href="/ai" className="rounded-full border border-[#C9A86A]/20 px-6 py-2.5 text-[14px] font-semibold text-[#E8D5B5] hover:bg-[#C9A86A]/10">View AI visuals</Link>
+          <Link href="/web" className="rounded-full bg-[#C9A86A] px-6 py-2.5 text-[14px] font-semibold text-[#081410] hover:bg-[#D4B78A]">View WEB (3 sites) →</Link>
+          <Link href="/ai" className="rounded-full border border-[#C9A86A]/20 px-6 py-2.5 text-[14px] font-semibold text-[#E8D5B5] hover:bg-[#C9A86A]/10">View AI & Automation (3) →</Link>
+          <Link href="/market-insight" className="rounded-full border border-amber-500/20 px-6 py-2.5 text-[14px] font-semibold text-amber-200 hover:bg-amber-500/10">View Quant (AmiBroker Desktop App Automation) →</Link>
         </div>
-        <p className="mt-3 text-[13px] text-zinc-400">Tip: drop images into <code className="px-1.5 py-0.5 bg-white/10 rounded text-[12px]">/public/portfolio/</code> and flip <code className="text-[12px]">status: placeholder → published</code> in <code className="text-[12px]">src/data/projects.ts</code></p>
+        <p className="mt-3 text-[13px] text-zinc-400">Published = real stack + live evidence. Remaining placeholders stay honest until asset drop. Filtered from <code className="px-1.5 py-0.5 bg-white/10 rounded text-[12px]">Detailed.docx</code> + <code className="text-[12px]">src/data/projects.ts:30</code></p>
       </section>
 
-      {/* Technologies */}
+      {/* Technologies — filtered from Detailed.docx Lens A: Category & Technologies & Evidence */}
       <section className="mx-auto max-w-[1280px] px-4 sm:px-6 py-6">
         <div className="rounded-[16px] border border-[#C9A86A]/10 bg-[#10201A]/40 p-6">
-          <div className="text-center text-[13px] tracking-[0.18em] text-[#C9A86A]">SKILLS & TOOLS — TECHNOLOGIES I WORK WITH</div>
-          <div className="mt-4 flex flex-wrap justify-center gap-2 text-[14px]">
-            {["Figma","Adobe XD","Photoshop","Illustrator","HTML5","CSS3","JavaScript","React.js","Tailwind CSS","Next.js","Supabase","Git & GitHub","VS Code"].map(t=>(
+          <div className="text-center text-[13px] tracking-[0.18em] text-[#C9A86A]">SKILLS & TOOLS — FILTERED FROM DETAILED.DOCX LENS A</div>
+          <div className="mt-1 text-center text-[11px] text-zinc-500">Category &amp; Technologies &amp; Evidence — what the code actually proves</div>
+          <div className="mt-4 flex flex-wrap justify-center gap-2 text-[12px]">
+            {[
+              "Python 3.11/3.12","Next.js 16","React 19","Tailwind 4","TypeScript 5","Express 5.x","Supabase 2.45","Vercel Serverless",
+              "Stripe 14 + Razorpay 2.8","Resend","JWT 9 / PDFKit","OpenAI gpt-4o","Anthropic sonnet-4","Gemini 2.5-flash",
+              "Pillow / PyMuPDF / openpyxl","Win32 API (VirtualAllocEx)","Selenium","pandas + Bhavcopy","AFL (AmiBroker)","ruff + pyright"
+            ].map(t=>(
               <span key={t} className="rounded-full border border-[#C9A86A]/10 bg-[#081410] px-3.5 py-1.5 text-zinc-300">{t}</span>
             ))}
           </div>
+          <p className="mt-3 text-center text-[11px] text-zinc-500">ALT-Text Generator (Harvard University) • Feather Creations • Moow.Hub • NEST Trading Terminal Automation • II*A Private Sector Office Work Automation • AmiBroker Desktop App Automation • LeyBros Hub — 7 real stacks, one narrative</p>
         </div>
       </section>
 
@@ -93,7 +102,7 @@ export default function Home() {
             <div className="text-[13px] tracking-[0.18em] text-[#C9A86A]">ABOUT ME</div>
             <h3 className="mt-2 font-display text-[22px] sm:text-[26px] font-medium text-white leading-tight">Passionate about design,<br /><span className="text-[#C9A86A]">driven by purpose.</span></h3>
             <p className="mt-4 text-[16px] leading-7 text-zinc-300">
-              I&apos;m a freelance technology & AI creative — former software engineer at Atos Syntel → LTM Limited → TCS. Now building through LeyBros Private Ltd.: vibe coding, websites, SEO, and AI-enabled creative — product, architecture, ads, UGC. Private investor separately; stock-market sharing is education-only.
+              I&apos;m a freelance technology & AI creative — former software engineer at Atos Syntel → LTM Limited → TCS. Now building through LeyBros Private Ltd.,: vibe coding, websites, SEO, and AI-enabled creative — product, architecture, ads, UGC. Private investor separately; stock-market sharing is education-only.
             </p>
             <div className="mt-5 grid grid-cols-3 gap-3 text-[14px]">
               <div className="rounded-xl bg-[#081410] border border-[#C9A86A]/10 p-3"><div className="text-[#C9A86A] font-medium">✓ Pixel-Perfect</div><div className="text-zinc-500 mt-1 text-[13px]">Clean, modern and user-focused</div></div>
@@ -110,7 +119,7 @@ export default function Home() {
                 ["Atos Syntel", "Enterprise foundation"],
                 ["LTM Limited", "LTM Limited — not LTIMindtree"],
                 ["Tata Consultancy Services (TCS)", "Large-scale delivery"],
-                ["LeyBros Private Ltd. — Freelancer", "Web → AI → Market Insight"],
+                ["LeyBros Private Ltd., — Freelancer", "Web → AI → Market Insight"],
               ].map(([org, note])=>(
                 <div key={org} className="flex gap-3">
                   <div className="h-2 w-2 mt-2.5 rounded-full bg-[#C9A86A] shrink-0" />

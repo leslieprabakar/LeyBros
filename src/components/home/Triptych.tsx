@@ -1,9 +1,9 @@
 import Link from "next/link";
 
 const items = [
-  { k:"WEB", title:"Code that becomes presence", desc:"Enterprise-grade engineering → modern vibe coding. Websites, web apps, SEO structure that scores on Core Web Vitals.", href:"/web" },
-  { k:"AI", title:"Images that move people", desc:"AI-assisted art, photoreal product/architecture, cinematic video, 3D exploded views, UGC reels — built to sell.", href:"/ai" },
-  { k:"MARKET INSIGHT", title:"Notes before narratives", desc:"Private investor practice. Screens, price action, volume/delivery, breakouts — taught with screenshots, not promises.", href:"/market-insight" },
+  { k:"WEB", title:"Code that becomes presence", desc:"Feather Creations + Moow.Hub + LeyBros — 3 responsive websites (HTML/CSS/JS, Next.js 16, Vercel Serverless + Supabase) that ship, rank, and sell. Detailed.docx Atlas #2, #3, #7.", href:"/web" },
+  { k:"AI & AUTOMATION", title:"Images + bots that save days", desc:"ALT-Text Generator (Harvard University) (Desktop AI, 3 LLM failover) + NEST Trading Terminal Automation (Win32 memory scrape) + II*A Private Sector Office Work Automation — Atlas #1, #4, #5. Built to automate, not just render.", href:"/ai" },
+  { k:"MARKET INSIGHT", title:"Quant, not tips", desc:"AmiBroker Desktop App Automation — Quantitative Backtesting Platform (pandas + Bhavcopy + AFL). Price action, HRoC 570, Harmonic XABC — taught with screenshots, not promises. Atlas #6.", href:"/market-insight" },
 ];
 
 export function Triptych() {

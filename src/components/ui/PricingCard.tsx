@@ -37,7 +37,7 @@ export function PricingCard({ tier }: { tier: Tier }) {
       <Link href={tier.href} className={`mt-6 inline-flex w-full justify-center rounded-full px-6 py-3.5 text-[14px] font-semibold tracking-wide transition ${tier.popular ? "bg-[#C9A86A] text-[#081410] hover:bg-[#D4B78A]" : "border border-[#C9A86A]/25 text-[#E8D5B5] hover:bg-[#C9A86A]/10"}`}>
         {tier.cta} →
       </Link>
-      <p className="mt-3 text-center text-[12px] text-zinc-400">No hidden charges • 50% advance</p>
+      <p className="mt-3 text-center text-[12px] text-zinc-400">No hidden charges (GST extra) • 50% advance</p>
     </div>
   );
 }
@@ -93,7 +93,7 @@ export const createTiers: Tier[] = [
     price: "₹14,999",
     period: "/ campaign",
     desc: "Cinematic promos + 3D that feels premium — priced to respect craft.",
-    features: ["UGC ad / cinematic promo (9:16, 16:9, 1:1)", "3D exploded view + turntable + lighting", "Script, captions & thumbnails included", "2 revisions • 10 days delivery"],
+    features: ["UGC ad [upto 15s] / cinematic promo (9:16, 16:9, 1:1..)", "3D exploded view + turntable + lighting", "Script, captions & thumbnails included", "2 revisions • 10 days delivery"],
     cta: "Get Started",
     href: "/contact",
     popular: true,

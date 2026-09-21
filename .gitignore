@@ -48,3 +48,6 @@ ReferenceImages/
 *.log
 dev.log
 .vercel
+# office temp
+~$*.docx
+Detailed.docx
