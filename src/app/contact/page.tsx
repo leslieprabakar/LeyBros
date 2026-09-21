@@ -8,11 +8,11 @@ export default async function ContactPage({ searchParams }: { searchParams?: Pro
     <div className="mx-auto max-w-[1280px] px-4 sm:px-6 py-10">
       <SectionHeader kicker="CONTACT — PREMIUM ENQUIRY" title="Two lanes, one inbox — choose your intent." desc="Freelance client enquiries and knowledge-program enquiries are handled separately. Pick the lane so context stays clean." />
       <div className="mt-8 grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
-        <form action="#" method="post" className="rounded-[16px] border border-[#C9A86A]/12 bg-[#10201A]/60 p-6 grid gap-4">
+        <form action="#" method="post" className="rounded-[16px] border border-[#C9A86A]/12 bg-[#10201A]/60 p-6 grid gap-4 w-full max-w-full min-w-0 overflow-hidden">
           {intent === "market-insight" && <div className="rounded-xl border border-amber-500/20 bg-amber-500/10 p-3 text-xs text-amber-200">Knowledge Program intent pre-selected — education only, not advice. You can switch below.</div>}
-          <div className="grid gap-2">
+          <div className="grid gap-2 min-w-0">
             <label htmlFor="category" className="text-xs tracking-[0.12em] text-zinc-400">CATEGORY *</label>
-            <select id="category" name="category" defaultValue={intent==="market-insight" ? "stock-knowledge" : ""} className="rounded-xl border border-[#C9A86A]/15 bg-[#081410] px-3 py-3 text-sm text-white" required>
+            <select id="category" name="category" defaultValue={intent==="market-insight" ? "stock-knowledge" : ""} className="rounded-xl border border-[#C9A86A]/15 bg-[#081410] px-3 py-2.5 sm:py-3 pr-8 text-xs sm:text-sm leading-tight whitespace-normal break-words text-white w-full max-w-full min-w-0" required>
               <option value="" disabled>Select one</option>
               <option value="website">Website Development — ₹4,999 onwards (Feather/Moow.Hub/LeyBros)</option>
               <option value="seo">SEO — ₹1,999/mo</option>
@@ -26,11 +26,11 @@ export default async function ContactPage({ searchParams }: { searchParams?: Pro
               <option value="stock-knowledge">Stock-Market Knowledge Program (Market Insight)</option>
             </select>
           </div>
-          <div className="grid gap-4 sm:grid-cols-2">
-            <div className="grid gap-2"><label htmlFor="name" className="text-xs tracking-[0.12em] text-zinc-400">FULL NAME *</label><input id="name" name="name" required placeholder="Your name" className="rounded-xl border border-[#C9A86A]/15 bg-[#081410] px-3 py-3 text-sm text-white placeholder:text-zinc-500" /></div>
-            <div className="grid gap-2"><label htmlFor="email" className="text-xs tracking-[0.12em] text-zinc-400">EMAIL *</label><input id="email" name="email" type="email" required placeholder="you@company.com" className="rounded-xl border border-[#C9A86A]/15 bg-[#081410] px-3 py-3 text-sm text-white placeholder:text-zinc-500" /></div>
+          <div className="grid gap-4 sm:grid-cols-2 min-w-0">
+            <div className="grid gap-2 min-w-0"><label htmlFor="name" className="text-xs tracking-[0.12em] text-zinc-400">FULL NAME *</label><input id="name" name="name" required placeholder="Your name" className="rounded-xl border border-[#C9A86A]/15 bg-[#081410] px-3 py-2.5 sm:py-3 text-xs sm:text-sm leading-tight text-white placeholder:text-zinc-500 w-full max-w-full min-w-0" /></div>
+            <div className="grid gap-2 min-w-0"><label htmlFor="email" className="text-xs tracking-[0.12em] text-zinc-400">EMAIL *</label><input id="email" name="email" type="email" required placeholder="you@company.com" className="rounded-xl border border-[#C9A86A]/15 bg-[#081410] px-3 py-2.5 sm:py-3 text-xs sm:text-sm leading-tight text-white placeholder:text-zinc-500 w-full max-w-full min-w-0" /></div>
           </div>
-          <div className="grid gap-2"><label htmlFor="message" className="text-xs tracking-[0.12em] text-zinc-400">MESSAGE *</label><textarea id="message" name="message" required rows={5} placeholder="Outcome you want, timeline, budget range (e.g. ₹4,999 / ₹9,999 / ₹18,999), links..." className="rounded-xl border border-[#C9A86A]/15 bg-[#081410] px-3 py-3 text-sm text-white placeholder:text-zinc-500" /></div>
+          <div className="grid gap-2 min-w-0"><label htmlFor="message" className="text-xs tracking-[0.12em] text-zinc-400">MESSAGE *</label><textarea id="message" name="message" required rows={5} placeholder="Outcome you want, timeline, budget range (e.g. ₹4,999 / ₹9,999 / ₹18,999), links..." className="rounded-xl border border-[#C9A86A]/15 bg-[#081410] px-3 py-2.5 sm:py-3 text-xs sm:text-sm leading-tight text-white placeholder:text-zinc-500 placeholder:text-xs placeholder:sm:text-sm w-full max-w-full min-w-0" /></div>
 
           <button type="submit" className="rounded-full bg-[#C9A86A] px-6 py-3 text-sm font-semibold text-[#081410] hover:bg-[#D4B78A]">Send enquiry →</button>
           <p className="text-[11px] leading-5 text-zinc-500">Pricing: Websites ₹4,999/₹9,999/₹18,999 • AI Visuals ₹5,999/20 • Video & 3D ₹14,999/campaign. 50% advance. Uses <code className="bg-white/10 px-1 py-0.5 rounded">mailto</code> fallback until <code>RESEND_API_KEY</code> is set.</p>
