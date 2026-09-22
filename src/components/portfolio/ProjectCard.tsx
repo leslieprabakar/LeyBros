@@ -13,6 +13,7 @@ export function ProjectCard({ p }: { p: Project }) {
   const isNest = p.slug === "nest-trader-excel-bridge";
   const isInfographic = isAltGen || isNest;
   const isContainException = isFlagship || isMoow;
+  const isTopThree = new Set(["feather-creations-website","moow-hub-ecommerce","leybros-flagship-hub"]).has(p.slug);
   const hubHref = p.href ?? (p.category === "build" ? "/web" : p.category === "research" ? "/market-insight" : "/ai");
   const hideHubLink = new Set(["grid-alttextgen-accessibility-ai","nest-trader-excel-bridge","iipa-auditor-automation","fno-rnd-quant-platform"]).has(p.slug);
 
@@ -71,9 +72,9 @@ export function ProjectCard({ p }: { p: Project }) {
               style={{ backgroundImage: `url(${p.cover})` }}
               aria-hidden
             />
-            {/* light gradients for readability — keeps image fully visible */}
-            <div className="absolute inset-x-0 top-0 h-[42%] bg-gradient-to-b from-black/55 via-black/18 to-transparent" aria-hidden />
-            <div className="absolute inset-x-0 bottom-0 h-[36%] bg-gradient-to-t from-black/60 via-black/20 to-transparent" aria-hidden />
+            {/* light gradients for readability — hidden for TopThree so image alone visible */}
+            {!isTopThree && <div className="absolute inset-x-0 top-0 h-[42%] bg-gradient-to-b from-black/55 via-black/18 to-transparent" aria-hidden />}
+            {!isTopThree && <div className="absolute inset-x-0 bottom-0 h-[36%] bg-gradient-to-t from-black/60 via-black/20 to-transparent" aria-hidden />}
           </>
         ) : isWebsite ? (
           <>
@@ -82,8 +83,8 @@ export function ProjectCard({ p }: { p: Project }) {
               style={{ backgroundImage: `url(${p.cover})` }}
               aria-hidden
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/35 to-black/10" />
-            <div className="absolute inset-0 opacity-20 bg-gradient-to-br from-[#C9A86A]/20 to-transparent" />
+            {!isTopThree && <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/35 to-black/10" />}
+            {!isTopThree && <div className="absolute inset-0 opacity-20 bg-gradient-to-br from-[#C9A86A]/20 to-transparent" />}
           </>
         ) : coverIsExternal ? (
           <>
@@ -99,8 +100,8 @@ export function ProjectCard({ p }: { p: Project }) {
         {/* gold bottom line on hover */}
         <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#C9A86A]/40 to-transparent opacity-0 group-hover:opacity-100 transition" />
 
-        {/* Top-left pills — hidden for infographics so image shows clean */}
-        {!isInfographic && (
+        {/* Top-left pills — hidden for infographics + TopThree so image shows clean */}
+        {!isInfographic && !isTopThree && (
           <div className="absolute left-3 top-3 flex flex-wrap gap-2 items-center">
             <Badge variant={variant}>{p.category.toUpperCase()}</Badge>
             {isWebsite && <span className="inline-flex items-center rounded-full border border-[#C9A86A]/30 bg-[#C9A86A]/15 px-3 py-1.5 text-[11px] tracking-[0.14em] font-semibold text-[#E8D5B5]">WEBSITE</span>}
@@ -108,8 +109,8 @@ export function ProjectCard({ p }: { p: Project }) {
           </div>
         )}
 
-        {/* Title + sub — hidden for infographics to keep image clean and doubled */}
-        {!isInfographic && (
+        {/* Title + sub — hidden for infographics + TopThree so image alone visible */}
+        {!isInfographic && !isTopThree && (
           <div className={`absolute left-0 right-0 px-5 ${isWebsite ? "top-[46px] text-left" : "inset-0 grid place-items-center text-center"}`}>
             <div className={isWebsite ? "" : "relative px-6 w-full"}>
               {!isWebsite && <div className="text-[13px] tracking-[0.16em] text-[#C9A86A]/70">{p.sub.toUpperCase()}</div>}
@@ -120,8 +121,8 @@ export function ProjectCard({ p }: { p: Project }) {
           </div>
         )}
 
-        {/* Subtle live badge bottom-right for website cards */}
-        {isWebsite && (
+        {/* Subtle live badge bottom-right for website cards — hidden for TopThree */}
+        {isWebsite && !isTopThree && (
           <div className="absolute right-2 bottom-2 rounded-full bg-black/55 border border-white/15 px-2.5 py-1 text-[10px] tracking-wide text-white/90 backdrop-blur">LIVE • {new URL(p.meta.liveUrl!).hostname}</div>
         )}
       </div>
@@ -131,14 +132,14 @@ export function ProjectCard({ p }: { p: Project }) {
         <div className="mt-3 flex flex-wrap gap-1.5">
           {p.tags.slice(0,3).map(t=> <span key={t} className="rounded-full bg-white/5 border border-white/5 px-2.5 py-1 text-[12px] tracking-wide text-zinc-300">{t}</span>)}
         </div>
-        <div className="mt-4 flex gap-2 items-center">
+        <div className={`mt-4 flex gap-2 items-center ${isTopThree ? "justify-center text-center" : ""}`}>
           {isWebsite && p.meta?.liveUrl ? (
-            <a href={p.meta.liveUrl} target="_blank" rel="noopener noreferrer" className="text-[14px] font-semibold text-[#E8D5B5] hover:text-[#C9A86A] hover:underline">View Website →</a>
+            <a href={p.meta.liveUrl} target="_blank" rel="noopener noreferrer" className={`text-[14px] font-semibold text-[#E8D5B5] hover:text-[#C9A86A] hover:underline ${isTopThree ? "w-full text-center" : ""}`}>{isFlagship ? "You are watching the website now" : isTopThree ? "Visit the website" : "View Website →"}</a>
           ) : hideHubLink ? null : (
             <Link href={hubHref} className="text-[14px] font-semibold text-[#E8D5B5] hover:underline">View hub →</Link>
           )}
           {isPlaceholder && <span className="text-[13px] text-zinc-500">• drop asset to publish</span>}
-          {isWebsite && <span className="text-[11px] text-zinc-500">• opens {new URL(p.meta.liveUrl!).hostname}</span>}
+          {isWebsite && !isTopThree && <span className="text-[11px] text-zinc-500">• opens {new URL(p.meta.liveUrl!).hostname}</span>}
         </div>
       </div>
     </div>

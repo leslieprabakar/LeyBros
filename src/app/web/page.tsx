@@ -18,7 +18,7 @@ export default function BuildPage() {
         <div className="mt-6 grid gap-4 md:grid-cols-3">
           {buildTiers.map(t=> <PricingCard key={t.name} tier={t} />)}
         </div>
-        <div className="mt-4 flex flex-wrap gap-2 text-[11px]">
+        <div className="mt-4 flex flex-wrap justify-center gap-2 text-[11px] text-center">
           <span className="rounded-full border border-[#C9A86A]/15 px-3 py-1 text-zinc-400">SEO Retainer ₹2,999/mo</span>
           <span className="rounded-full border border-[#C9A86A]/15 px-3 py-1 text-zinc-400">Maintenance ₹1,499/mo</span>
           <span className="rounded-full border border-[#C9A86A]/15 px-3 py-1 text-zinc-400">Domain purchase & hosting billed separately</span>
