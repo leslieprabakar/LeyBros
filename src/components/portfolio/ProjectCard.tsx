@@ -7,14 +7,75 @@ export function ProjectCard({ p }: { p: Project }) {
   const isPlaceholder = p.status === "placeholder";
   const isWebsite = p.delivery === "website" && p.status === "published" && !!p.meta?.liveUrl;
   const coverIsExternal = typeof p.cover === "string" && p.cover.startsWith("http");
+  const isFlagship = p.slug === "leybros-flagship-hub";
+  const isMoow = p.slug === "moow-hub-ecommerce";
+  const isAltGen = p.slug === "grid-alttextgen-accessibility-ai";
+  const isNest = p.slug === "nest-trader-excel-bridge";
+  const isInfographic = isAltGen || isNest;
+  const isContainException = isFlagship || isMoow;
   const hubHref = p.href ?? (p.category === "build" ? "/web" : p.category === "research" ? "/market-insight" : "/ai");
   const hideHubLink = new Set(["grid-alttextgen-accessibility-ai","nest-trader-excel-bridge","iipa-auditor-automation","fno-rnd-quant-platform"]).has(p.slug);
 
   return (
-    <div className="group overflow-hidden rounded-[16px] border border-[#C9A86A]/12 bg-[#10201A]/60 hover:border-[#C9A86A]/20 hover:bg-[#123727]/50 transition">
-      <div className="aspect-[16/10] relative overflow-hidden bg-[#081410]">
-        {/* Background: live homepage for 3 website cards, gradient fallback otherwise */}
-        {isWebsite ? (
+    <div className={`group overflow-hidden rounded-[16px] border border-[#C9A86A]/12 bg-[#10201A]/60 hover:border-[#C9A86A]/20 hover:bg-[#123727]/50 transition ${isNest ? "sm:col-span-2 lg:col-span-2" : ""}`}>
+      <div className={`${isAltGen ? "aspect-[16/20]" : isNest ? "aspect-[24/14]" : "aspect-[16/10]"} relative overflow-hidden bg-[#081410]`}>
+        {/* Background: infographics (AltGen + NEST) — clickable, doubled, clean */}
+        {isInfographic ? (
+          <>
+            {/* Infographic — clickable background (AltGen / NEST), no text overlay */}
+            <a
+              href={p.cover.split("?")[0]}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="absolute inset-0 bg-contain bg-center bg-no-repeat group/image"
+              style={{ backgroundImage: `url(${p.cover})` }}
+              aria-label="Open full infographic"
+              title="Click to open full image"
+            />
+            <a
+              href={p.cover.split("?")[0]}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent opacity-80 group-hover/image:from-black/50 transition"
+              aria-hidden
+            />
+            <a
+              href={p.cover.split("?")[0]}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="absolute inset-0 grid place-items-center opacity-0 group-hover/image:opacity-100 transition bg-black/25"
+              aria-hidden
+            >
+              <span className="rounded-full bg-white/95 text-[#0F172A] text-[12px] font-semibold px-3.5 py-1.5 shadow-lg">Click to expand ↗</span>
+            </a>
+          </>
+        ) : isContainException ? (
+          <>
+            {/* base — light for flagship transparent PNG, dark for Moow screenshot letterbox */}
+            <div className={`absolute inset-0 ${isFlagship ? "bg-[#ECEEF1]" : "bg-[#1E140F]"}`} aria-hidden />
+            {/* subtle checker overlay only for flagship transparency */}
+            {isFlagship && (
+              <div
+                className="absolute inset-0 opacity-[0.07]"
+                style={{
+                  backgroundImage:
+                    "linear-gradient(45deg, #9AA3B2 25%, transparent 25%), linear-gradient(-45deg, #9AA3B2 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #9AA3B2 75%), linear-gradient(-45deg, transparent 75%, #9AA3B2 75%)",
+                  backgroundSize: "20px 20px",
+                  backgroundPosition: "0 0, 0 10px, 10px -10px, -10px 0px",
+                }}
+                aria-hidden
+              />
+            )}
+            <div
+              className="absolute inset-0 bg-contain bg-center bg-no-repeat"
+              style={{ backgroundImage: `url(${p.cover})` }}
+              aria-hidden
+            />
+            {/* light gradients for readability — keeps image fully visible */}
+            <div className="absolute inset-x-0 top-0 h-[42%] bg-gradient-to-b from-black/55 via-black/18 to-transparent" aria-hidden />
+            <div className="absolute inset-x-0 bottom-0 h-[36%] bg-gradient-to-t from-black/60 via-black/20 to-transparent" aria-hidden />
+          </>
+        ) : isWebsite ? (
           <>
             <div
               className="absolute inset-0 bg-cover bg-top bg-no-repeat"
@@ -38,22 +99,26 @@ export function ProjectCard({ p }: { p: Project }) {
         {/* gold bottom line on hover */}
         <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#C9A86A]/40 to-transparent opacity-0 group-hover:opacity-100 transition" />
 
-        {/* Top-left pills: BUILD + WEBSITE (only for 3 website cards) */}
-        <div className="absolute left-3 top-3 flex flex-wrap gap-2 items-center">
-          <Badge variant={variant}>{p.category.toUpperCase()}</Badge>
-          {isWebsite && <span className="inline-flex items-center rounded-full border border-[#C9A86A]/30 bg-[#C9A86A]/15 px-3 py-1.5 text-[11px] tracking-[0.14em] font-semibold text-[#E8D5B5]">WEBSITE</span>}
-          {isPlaceholder && <Badge variant="gold">Placeholder</Badge>}
-        </div>
-
-        {/* Title + sub below pills, over live background for website cards */}
-        <div className={`absolute left-0 right-0 px-5 ${isWebsite ? "top-[46px] text-left" : "inset-0 grid place-items-center text-center"}`}>
-          <div className={isWebsite ? "" : "relative px-6 w-full"}>
-            {!isWebsite && <div className="text-[13px] tracking-[0.16em] text-[#C9A86A]/70">{p.sub.toUpperCase()}</div>}
-            <div className={`font-display text-white line-clamp-2 ${isWebsite ? "mt-1.5 text-[14px] font-semibold leading-tight drop-shadow-[0_1px_8px_rgba(0,0,0,0.8)]" : "mt-2 text-[15px] font-medium"}`}>{p.title}</div>
-            {isWebsite && <div className="mt-1 text-[11px] tracking-wide text-white/80 line-clamp-1">{p.meta?.liveUrl?.replace("https://","")}</div>}
-            {isPlaceholder && !isWebsite && <div className="mt-2 inline-flex rounded-full border border-dashed border-[#C9A86A]/25 bg-black/40 px-3 py-1.5 text-[12px] text-zinc-400">Awaiting asset — integration ready</div>}
+        {/* Top-left pills — hidden for infographics so image shows clean */}
+        {!isInfographic && (
+          <div className="absolute left-3 top-3 flex flex-wrap gap-2 items-center">
+            <Badge variant={variant}>{p.category.toUpperCase()}</Badge>
+            {isWebsite && <span className="inline-flex items-center rounded-full border border-[#C9A86A]/30 bg-[#C9A86A]/15 px-3 py-1.5 text-[11px] tracking-[0.14em] font-semibold text-[#E8D5B5]">WEBSITE</span>}
+            {isPlaceholder && <Badge variant="gold">Placeholder</Badge>}
           </div>
-        </div>
+        )}
+
+        {/* Title + sub — hidden for infographics to keep image clean and doubled */}
+        {!isInfographic && (
+          <div className={`absolute left-0 right-0 px-5 ${isWebsite ? "top-[46px] text-left" : "inset-0 grid place-items-center text-center"}`}>
+            <div className={isWebsite ? "" : "relative px-6 w-full"}>
+              {!isWebsite && <div className="text-[13px] tracking-[0.16em] text-[#C9A86A]/70">{p.sub.toUpperCase()}</div>}
+              <div className={`font-display text-white line-clamp-2 ${isWebsite ? "mt-1.5 text-[14px] font-semibold leading-tight drop-shadow-[0_1px_8px_rgba(0,0,0,0.8)]" : "mt-2 text-[15px] font-medium"}`}>{p.title}</div>
+              {isWebsite && <div className="mt-1 text-[11px] tracking-wide text-white/80 line-clamp-1">{p.meta?.liveUrl?.replace("https://","")}</div>}
+              {isPlaceholder && !isWebsite && <div className="mt-2 inline-flex rounded-full border border-dashed border-[#C9A86A]/25 bg-black/40 px-3 py-1.5 text-[12px] text-zinc-400">Awaiting asset — integration ready</div>}
+            </div>
+          </div>
+        )}
 
         {/* Subtle live badge bottom-right for website cards */}
         {isWebsite && (
@@ -61,8 +126,8 @@ export function ProjectCard({ p }: { p: Project }) {
         )}
       </div>
       <div className="p-5">
-        <div className="font-display text-[16px] font-medium text-white line-clamp-2">{p.title}</div>
-        <p className="mt-1 text-[14px] leading-6 text-zinc-400 line-clamp-2">{p.excerpt}</p>
+        {!isInfographic && <div className="font-display text-[16px] font-medium text-white line-clamp-2">{p.title}</div>}
+        <p className={`${!isInfographic ? "mt-1" : ""} text-[14px] leading-6 text-zinc-400 line-clamp-2`}>{p.excerpt}</p>
         <div className="mt-3 flex flex-wrap gap-1.5">
           {p.tags.slice(0,3).map(t=> <span key={t} className="rounded-full bg-white/5 border border-white/5 px-2.5 py-1 text-[12px] tracking-wide text-zinc-300">{t}</span>)}
         </div>
